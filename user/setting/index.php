@@ -37,7 +37,7 @@ include("../../server/connection.php");
 
     <!-- Begin page -->
     <div id="layout-wrapper">
-        <?php include("../components/navbar.php") ?>
+<?php include ("../components/navbar.php") ?>
 
         <!-- removeNotificationModal -->
         <div id="removeNotificationModal" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
@@ -81,12 +81,12 @@ include("../../server/connection.php");
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">New Transaction</h4>
+                                <h4 class="mb-sm-0">Profile</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Account</a></li>
-                                        <li class="breadcrumb-item active">New Transaction</li>
+                                        <li class="breadcrumb-item active">Setting</li>
                                     </ol>
                                 </div>
 
@@ -110,9 +110,9 @@ include("../../server/connection.php");
                                                 <div class="mb-3">
                                                     <label for="credit/debit" class="form-label">Credit / Debit</label>
                                                     <select class="form-select" aria-label="Default select example">
-                                                        <option selected="">Select Credit / Debit</option>
-                                                        <option value="1">Credit</option>
-                                                        <option value="2">Debit</option>
+                                                        <option selected="">Gender</option>
+                                                        <option value="1">male</option>
+                                                        <option value="2">Female</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -126,7 +126,7 @@ include("../../server/connection.php");
                                         </div>
 
                                         <div class="mb-3">
-                                            <label class="form-label" for="attachment">Attachment</label>
+                                            <label class="form-label" for="attachment">Profile Photo</label>
                                             <div class="dropzone my-dropzone">
                                                 <div class="dz-message">
                                                     <div class="mb-3"> <i
@@ -178,6 +178,8 @@ include("../../server/connection.php");
             </div>
             <!-- End Page-content -->
             <?php include("../components/footer.php") ?>
+
+
         </div>
         <!-- end main content-->
 
