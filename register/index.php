@@ -22,7 +22,7 @@ if(isset($_POST['register'])){
     // checking if the input is empty
     if(!empty($email) && !empty($username) && !empty($password)){
 
-        $hashing  = password_hash($password , PASSWORD_DEFAULT);
+ $hashing  = password_hash($password , PASSWORD_DEFAULT);
 
         
 

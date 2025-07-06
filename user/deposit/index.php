@@ -34,6 +34,7 @@ include("../../server/connection.php");
     <div id="layout-wrapper">
 
         <?php include('../components/navbar.php') ?>
+    
 
         
         <!-- ========== App Menu ========== -->
