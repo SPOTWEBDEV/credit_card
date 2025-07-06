@@ -1,5 +1,5 @@
 <?php
-include("../server/connection.php");
+include("../../server/connection.php");
 
 ?>
 
@@ -8,28 +8,28 @@ include("../server/connection.php");
 <html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="light" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable">
 
 
-<!-- Mirrored from themesbrand.com/invoika/layouts/transaction-new.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Jun 2025 13:09:38 GMT -->
+<!-- Mirrored from themesbrand.com/invoika/layouts/transaction-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Jun 2025 13:09:38 GMT -->
 <head>
 
     <meta charset="utf-8" />
-    <title>New Transaction | Invoika - Admin & Dashboard Template</title>
+    <title>Transaction List | Invoika - Admin & Dashboard Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="<?php echo $domain ?>assets/images/favicon.ico">
+    <link rel="shortcut icon" href="<?php echo $domain ?>assets/assets/images/favicon.ico">
 
-    <!-- Plugins css -->
-    <link href="<?php echo $domain ?>assets/libs/dropzone/dropzone.css" rel="stylesheet" type="text/css" />
+    <!-- Sweet Alert css-->
+    <link href="<?php echo $domain ?>assets/assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Layout config Js -->
-    <script src="<?php echo $domain ?>assets/js/layout.js"></script>
+    <script src="<?php echo $domain ?>assets/assets/js/layout.js"></script>
     <!-- Bootstrap Css -->
-    <link href="<?php echo $domain ?>assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo $domain ?>assets/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
-    <link href="<?php echo $domain ?>assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo $domain ?>assets/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
-    <link href="<?php echo $domain ?>assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo $domain ?>assets/assets/css/app.min.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -46,19 +46,19 @@ include("../server/connection.php");
                 <div class="navbar-brand-box horizontal-logo">
                     <a href="index.html" class="logo logo-dark">
                         <span class="logo-sm">
-                            <img src="<?php echo $domain ?>assets/images/logo-sm.png" alt="" height="22">
+                            <img src="<?php echo $domain ?>assets/assets/images/logo-sm.png" alt="" height="22">
                         </span>
                         <span class="logo-lg">
-                            <img src="<?php echo $domain ?>assets/images/logo-dark.png" alt="" height="21">
+                            <img src="<?php echo $domain ?>assets/assets/images/logo-dark.png" alt="" height="21">
                         </span>
                     </a>
 
                     <a href="index.html" class="logo logo-light">
                         <span class="logo-sm">
-                            <img src="<?php echo $domain ?>assets/images/logo-sm.png" alt="" height="22">
+                            <img src="<?php echo $domain ?>assets/assets/images/logo-sm.png" alt="" height="22">
                         </span>
                         <span class="logo-lg">
-                            <img src="<?php echo $domain ?>assets/images/logo-light.png" alt="" height="21">
+                            <img src="<?php echo $domain ?>assets/assets/images/logo-light.png" alt="" height="21">
                         </span>
                     </a>
                 </div>
@@ -121,7 +121,7 @@ include("../server/connection.php");
                                 <!-- item -->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
                                     <div class="d-flex">
-                                        <img src="<?php echo $domain ?>assets/images/users/avatar-2.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="<?php echo $domain ?>assets/assets/images/users/avatar-2.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                         <div class="flex-1">
                                             <h6 class="m-0">Angela Bernier</h6>
                                             <span class="fs-11 mb-0 text-muted">Manager</span>
@@ -131,7 +131,7 @@ include("../server/connection.php");
                                 <!-- item -->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
                                     <div class="d-flex">
-                                        <img src="<?php echo $domain ?>assets/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="<?php echo $domain ?>assets/assets/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                         <div class="flex-1">
                                             <h6 class="m-0">David Grasso</h6>
                                             <span class="fs-11 mb-0 text-muted">Web Designer</span>
@@ -141,7 +141,7 @@ include("../server/connection.php");
                                 <!-- item -->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
                                     <div class="d-flex">
-                                        <img src="<?php echo $domain ?>assets/images/users/avatar-5.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="<?php echo $domain ?>assets/assets/images/users/avatar-5.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                         <div class="flex-1">
                                             <h6 class="m-0">Mike Bunch</h6>
                                             <span class="fs-11 mb-0 text-muted">React Developer</span>
@@ -181,54 +181,54 @@ include("../server/connection.php");
 
                 <div class="dropdown ms-1 topbar-head-dropdown header-item">
                     <button type="button" class="btn btn-icon btn-topbar btn-ghost-primary rounded-circle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img id="header-lang-img" src="<?php echo $domain ?>assets/images/flags/us.svg" alt="Header Language" height="20" class="rounded">
+                        <img id="header-lang-img" src="<?php echo $domain ?>assets/assets/images/flags/us.svg" alt="Header Language" height="20" class="rounded">
                     </button>
                     <div class="dropdown-menu dropdown-menu-end">
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item language py-2" data-lang="en" title="English">
-                            <img src="<?php echo $domain ?>assets/images/flags/us.svg" alt="user-image" class="me-2 rounded" height="18">
+                            <img src="<?php echo $domain ?>assets/assets/images/flags/us.svg" alt="user-image" class="me-2 rounded" height="18">
                             <span class="align-middle">English</span>
                         </a>
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp" title="Spanish">
-                            <img src="<?php echo $domain ?>assets/images/flags/spain.svg" alt="user-image" class="me-2 rounded" height="18">
+                            <img src="<?php echo $domain ?>assets/assets/images/flags/spain.svg" alt="user-image" class="me-2 rounded" height="18">
                             <span class="align-middle">Española</span>
                         </a>
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="gr" title="German">
-                            <img src="<?php echo $domain ?>assets/images/flags/germany.svg" alt="user-image" class="me-2 rounded" height="18"> <span class="align-middle">Deutsche</span>
+                            <img src="<?php echo $domain ?>assets/assets/images/flags/germany.svg" alt="user-image" class="me-2 rounded" height="18"> <span class="align-middle">Deutsche</span>
                         </a>
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="it" title="Italian">
-                            <img src="<?php echo $domain ?>assets/images/flags/italy.svg" alt="user-image" class="me-2 rounded" height="18">
+                            <img src="<?php echo $domain ?>assets/assets/images/flags/italy.svg" alt="user-image" class="me-2 rounded" height="18">
                             <span class="align-middle">Italiana</span>
                         </a>
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ru" title="Russian">
-                            <img src="<?php echo $domain ?>assets/images/flags/russia.svg" alt="user-image" class="me-2 rounded" height="18">
+                            <img src="<?php echo $domain ?>assets/assets/images/flags/russia.svg" alt="user-image" class="me-2 rounded" height="18">
                             <span class="align-middle">русский</span>
                         </a>
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ch" title="Chinese">
-                            <img src="<?php echo $domain ?>assets/images/flags/china.svg" alt="user-image" class="me-2 rounded" height="18">
+                            <img src="<?php echo $domain ?>assets/assets/images/flags/china.svg" alt="user-image" class="me-2 rounded" height="18">
                             <span class="align-middle">中国人</span>
                         </a>
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="fr" title="French">
-                            <img src="<?php echo $domain ?>assets/images/flags/french.svg" alt="user-image" class="me-2 rounded" height="18">
+                            <img src="<?php echo $domain ?>assets/assets/images/flags/french.svg" alt="user-image" class="me-2 rounded" height="18">
                             <span class="align-middle">français</span>
                         </a>
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ar" title="Arabic">
-                            <img src="<?php echo $domain ?>assets/images/flags/ae.svg" alt="user-image" class="me-2 rounded" height="18">
+                            <img src="<?php echo $domain ?>assets/assets/images/flags/ae.svg" alt="user-image" class="me-2 rounded" height="18">
                             <span class="align-middle">Arabic</span>
                         </a>
                     </div>
@@ -296,7 +296,7 @@ include("../server/connection.php");
 
                                     <div class="text-reset notification-item d-block dropdown-item position-relative">
                                         <div class="d-flex">
-                                            <img src="<?php echo $domain ?>assets/images/users/avatar-2.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                            <img src="<?php echo $domain ?>assets/assets/images/users/avatar-2.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                             <div class="flex-1">
                                                 <a href="#!" class="stretched-link">
                                                     <h6 class="mt-0 mb-1 fs-14 fw-semibold">Angela Bernier</h6>
@@ -345,7 +345,7 @@ include("../server/connection.php");
 
                                     <div class="text-reset notification-item d-block dropdown-item position-relative">
                                         <div class="d-flex">
-                                            <img src="<?php echo $domain ?>assets/images/users/avatar-8.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                            <img src="<?php echo $domain ?>assets/assets/images/users/avatar-8.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                             <div class="flex-1">
                                                 <a href="#!" class="stretched-link">
                                                     <h6 class="mt-0 mb-1 fs-14 fw-semibold">Maureen Gibson</h6>
@@ -380,7 +380,7 @@ include("../server/connection.php");
                 <div class="dropdown header-item">
                     <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="d-flex align-items-center">
-                            <img class="rounded-circle header-profile-user" src="<?php echo $domain ?>assets/images/users/avatar-4.jpg" alt="Header Avatar">
+                            <img class="rounded-circle header-profile-user" src="<?php echo $domain ?>assets/assets/images/users/avatar-4.jpg" alt="Header Avatar">
                             <span class="text-start ms-xl-2">
                                 <span class="d-none d-xl-inline-block fw-medium user-name-text fs-16">Calvin D. <i class="las la-angle-down fs-12 ms-1"></i></span>
                             </span>
@@ -432,19 +432,19 @@ include("../server/connection.php");
                 <!-- Dark Logo-->
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="<?php echo $domain ?>assets/images/logo-sm.png" alt="" height="22">
+                        <img src="<?php echo $domain ?>assets/assets/images/logo-sm.png" alt="" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="<?php echo $domain ?>assets/images/logo-dark.png" alt="" height="21">
+                        <img src="<?php echo $domain ?>assets/assets/images/logo-dark.png" alt="" height="21">
                     </span>
                 </a>
                 <!-- Light Logo-->
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="<?php echo $domain ?>assets/images/logo-sm.png" alt="" height="22">
+                        <img src="<?php echo $domain ?>assets/assets/images/logo-sm.png" alt="" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="<?php echo $domain ?>assets/images/logo-light.png" alt="" height="21">
+                        <img src="<?php echo $domain ?>assets/assets/images/logo-light.png" alt="" height="21">
                     </span>
                 </a>
                 <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
@@ -926,7 +926,7 @@ include("../server/connection.php");
                         </li>
 
                         <div class="help-box text-center">
-                            <img src="<?php echo $domain ?>assets/images/create-invoice.png" class="img-fluid" alt="">
+                            <img src="<?php echo $domain ?>assets/assets/images/create-invoice.png" class="img-fluid" alt="">
                             <p class="mb-3 mt-2 text-muted">Upgrade To Pro For More Features</p>
                             <div class="mt-3">
                                 <a href="invoice-add.html" class="btn btn-primary"> Create Invoice</a>
@@ -956,12 +956,12 @@ include("../server/connection.php");
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">New Transaction</h4>
+                                <h4 class="mb-sm-0">Transaction List</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Account</a></li>
-                                        <li class="breadcrumb-item active">New Transaction</li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">User</a></li>
+                                        <li class="breadcrumb-item active">Transaction List</li>
                                     </ol>
                                 </div>
 
@@ -970,84 +970,170 @@ include("../server/connection.php");
                     </div>
                     <!-- end page title -->
 
+                    <div class="row pb-4 gy-3">
+                        <div class="col-sm-4">
+                            <a href="transaction-new.html" class="btn btn-primary"><i class="las la-plus me-1"></i>Add Transaction</a>
+                        </div>
+
+                        <div class="col-sm-auto ms-auto">
+                           <div class="d-flex gap-3">
+                            <div class="search-box">
+                                <input type="text" class="form-control" id="searchMemberList" placeholder="Search for result">
+                                <i class="las la-search search-icon"></i>
+                            </div>
+                            <div class="">
+                                <button type="button" id="dropdownMenuLink1" data-bs-toggle="dropdown" aria-expanded="false" class="btn btn-soft-info btn-icon fs-14"><i class="las la-ellipsis-v fs-18"></i></button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                                    <li><a class="dropdown-item" href="#">All</a></li>
+                                    <li><a class="dropdown-item" href="#">Last Week</a></li>
+                                    <li><a class="dropdown-item" href="#">Last Month</a></li>
+                                    <li><a class="dropdown-item" href="#">Last Year</a></li>
+                                </ul>
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="card">
                                 <div class="card-body">
-                                        <form>
-                                        <div class="mb-3">
-                                            <label class="form-label" for="desc">Description</label>
-                                            <textarea class="form-control" id="desc" placeholder="Enter Description" rows="3"></textarea>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="mb-3">
-                                                    <label for="credit/debit" class="form-label">Credit / Debit</label>
-                                                    <select class="form-select" aria-label="Default select example">
-                                                        <option selected="">Select Credit / Debit</option>
-                                                        <option value="1">Credit</option>
-                                                        <option value="2">Debit</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-6">
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="price">Amount</label>
-                                                    <input id="price" name="price" placeholder="Enter Amount" type="number" class="form-control">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label class="form-label" for="attachment">Attachment</label>
-                                            <div class="dropzone my-dropzone">
-                                                <div class="dz-message">
-                                                    <div class="mb-3"> <i
-                                                            class="display-4 text-muted ri-upload-cloud-2-fill"></i>
-                                                    </div>
-                                                    <h5>Drop files here or click to upload.</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        </form>
-                                        
-                                        <ul class="list-unstyled mb-0" id="dropzone-preview">
-                                            <li class="mt-2" id="dropzone-preview-list">
-                                                <!-- This is used as the file preview template -->
-                                                <div class="border rounded">
-                                                    <div class="d-flex p-2">
-                                                        <div class="flex-shrink-0 me-3">
-                                                            <div class="avatar-sm bg-light rounded">
-                                                                <img data-dz-thumbnail class="img-fluid rounded d-block" src="<?php echo $domain ?>assets/images/new-document.png" alt="Dropzone-Image" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="flex-grow-1">
-                                                            <div class="pt-1">
-                                                                <h5 class="fs-14 mb-1" data-dz-name>&nbsp;</h5>
-                                                                <p class="fs-13 text-muted mb-0" data-dz-size></p>
-                                                                <strong class="error text-danger" data-dz-errormessage></strong>
-                                                            </div>
-                                                        </div>
-                                                        <div class="flex-shrink-0 ms-3">
-                                                            <button data-dz-remove class="btn btn-sm btn-danger">Delete</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-    
-                                        <div class="hstack gap-2 mt-4">
-                                            <button type="submit" class="btn btn-primary">Pay Now</button>
-                                            <button type="button" class="btn btn-light">Discard</button>
-                                        </div>
+                                    <div class="table-responsive table-card">
+                                        <table class="table table-hover table-nowrap align-middle mb-0">
+                                            <thead>
+                                                <tr class="text-muted text-uppercase">
+                                                    <th scope="col">Transaction Id</th>
+                                                    <th scope="col">Date</th>
+                                                    <th scope="col">Description</th>
+                                                    <th scope="col">Credit / Debit</th>
+                                                    <th scope="col">Amount</th>
+                                                    <th scope="col" style="width: 12%;">Attachment</th>
+                                                </tr>
+                                            </thead>
+        
+                                            <tbody>
+                                                <tr>
+                                                    <td>#BR2150</td>
+                                                    <td>20 Sep, 2022</td>
+                                                    <td>Maintenance</td>
+                                                    <td><span class="badge bg-success-subtle text-success  p-2">Credit</span></td>
+                                                    <td>$1200.00</td>
+                                                    <td>N/A</td>
+                                                </tr>
+        
+                                                <tr>
+                                                    <td>#BR2151</td>
+                                                    <td>12 Arl, 2022</td>
+                                                    <td>Flight Booking</td>
+                                                    <td><span class="badge bg-success-subtle text-success  p-2">Credit</span></td>
+                                                    <td>$3600.00</td>
+                                                    <td>N/A</td>
+                                                    
+                                                </tr>
+        
+                                                <tr>
+                                                    <td>#BR2152</td>
+                                                    <td>28 Mar, 2022</td>
+                                                    <td>Office Rent</td>
+                                                    <td><span class="badge bg-danger-subtle text-danger  p-2">Debit</span></td>
+                                                    <td>$800.00</td>
+                                                    <td>N/A</td>
+                                                </tr>
+        
+                                                <tr>
+                                                    <td>#BR2153</td>
+                                                    <td>23 Aug, 2022</td>
+                                                    <td>Salary Payment</td>
+                                                    <td><span class="badge bg-success-subtle text-success  p-2">Credit</span></td>
+                                                    <td>$1600.00</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-soft-success btn-sm btn-icon fs-14">
+                                                            <i class="las la-download fs-18"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+        
+                                                <tr>
+                                                    <td>#BR2154</td>
+                                                    <td>18 Sep, 2022</td>
+                                                    <td>Salary Payment</td>
+                                                    <td><span class="badge bg-danger-subtle text-danger  p-2">Debit</span></td>
+                                                    <td>$3200.00</td>
+                                                    <td>N/A</td>
+                                                </tr>
+        
+                                                <tr>
+                                                    <td>#BR2155</td>
+                                                    <td>12 Feb, 2022</td>
+                                                    <td>Maintenance</td>
+                                                    <td><span class="badge bg-success-subtle text-success  p-2">Credit</span></td>
+                                                    <td>$900.00</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-soft-success btn-sm btn-icon fs-14">
+                                                            <i class="las la-download fs-18"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+        
+                                                <tr>
+                                                    <td>#BR2156</td>
+                                                    <td>30 Nov, 2022</td>
+                                                    <td>Online Product</td>
+                                                    <td><span class="badge bg-success-subtle text-success  p-2">Credit</span></td>
+                                                    <td>$200.00</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-soft-success btn-sm btn-icon fs-14">
+                                                            <i class="las la-download fs-18"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+        
+                                                <tr>
+                                                    <td>#BR2157</td>
+                                                    <td>23 Sep, 2022</td>
+                                                    <td>Office Rent</td>
+                                                    <td><span class="badge bg-danger-subtle text-danger  p-2">Debit</span></td>
+                                                    <td>$1200.00</td>
+                                                    <td>N/A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#BR2158</td>
+                                                    <td>16 Aug, 2022</td>
+                                                    <td>Online Product</td>
+                                                    <td><span class="badge bg-success-subtle text-success  p-2">Credit</span></td>
+                                                    <td>$1800.00</td>
+                                                    <td>N/A</td>
+                                                </tr>
+                                            </tbody><!-- end tbody -->
+                                        </table><!-- end table -->
+                                    </div><!-- end table responsive -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
-               
+                    <div class="row align-items-center mb-4 gy-3">
+                        <div class="col-md-5">
+                            <p class="mb-0 text-muted">Showing <b>1</b> to <b>5</b> of <b>10</b> results</p>
+                        </div>
+                        <div class="col-sm-auto ms-auto">
+                            <nav aria-label="...">
+                                <ul class="pagination mb-0">
+                                  <li class="page-item disabled">
+                                    <span class="page-link">Previous</span>
+                                  </li>
+                                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                  <li class="page-item" aria-current="page">
+                                    <span class="page-link">2</span>
+                                  </li>
+                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                  </li>
+                                </ul>
+                              </nav>
+                        </div>
+                    </div>
                 </div>
                 <!-- container-fluid -->
             </div>
@@ -1072,8 +1158,6 @@ include("../server/connection.php");
 
     </div>
     <!-- END layout-wrapper -->
-
-
 
     <!--start back-to-top-->
     <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
@@ -1571,21 +1655,16 @@ include("../server/connection.php");
     </div>
 
     <!-- JAVASCRIPT -->
-    <script src="<?php echo $domain ?>assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="<?php echo $domain ?>assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="<?php echo $domain ?>assets/libs/node-waves/waves.min.js"></script>
-    <script src="<?php echo $domain ?>assets/libs/feather-icons/feather.min.js"></script>
-    <script src="<?php echo $domain ?>assets/js/plugins.js"></script>
-
-    <!-- dropzone js -->
-    <script src="<?php echo $domain ?>assets/libs/dropzone/dropzone-min.js"></script>
-
-    <script src="<?php echo $domain ?>assets/js/pages/ecommerce-product-create.init.js"></script>
+    <script src="<?php echo $domain ?>assets/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo $domain ?>assets/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="<?php echo $domain ?>assets/assets/libs/node-waves/waves.min.js"></script>
+    <script src="<?php echo $domain ?>assets/assets/libs/feather-icons/feather.min.js"></script>
+    <script src="<?php echo $domain ?>assets/assets/js/plugins.js"></script>
 
     <!-- App js -->
-    <script src="<?php echo $domain ?>assets/js/app.js"></script>
+    <script src="<?php echo $domain ?>assets/assets/js/app.js"></script>
 </body>
 
 
-<!-- Mirrored from themesbrand.com/invoika/layouts/transaction-new.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Jun 2025 13:09:38 GMT -->
+<!-- Mirrored from themesbrand.com/invoika/layouts/transaction-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Jun 2025 13:09:38 GMT -->
 </html>

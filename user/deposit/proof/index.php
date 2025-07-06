@@ -1,5 +1,5 @@
 <?php
-include("../../server/connection.php");
+include("../../../server/connection.php");
 
 ?>
 
@@ -37,7 +37,7 @@ include("../../server/connection.php");
 
     <!-- Begin page -->
     <div id="layout-wrapper">
-        <?php include("../components/navbar.php") ?>
+        <?php include("../../components/navbar.php") ?>
 
         <!-- removeNotificationModal -->
         <div id="removeNotificationModal" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
@@ -64,7 +64,7 @@ include("../../server/connection.php");
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
         <!-- ========== App Menu ========== -->
-        <?php include("../components/sidenav.php") ?>
+        <?php include("../../components/sidenav.php") ?>
         <!-- Left Sidebar End -->
         <!-- Vertical Overlay-->
         <div class="vertical-overlay"></div>
@@ -95,35 +95,7 @@ include("../../server/connection.php");
                     </div>
                     <!-- end page title -->
 
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <form>
-                                        <div class="mb-3">
-                                            <label class="form-label" for="desc">Description</label>
-                                            <textarea class="form-control" id="desc" placeholder="Enter Description" rows="3"></textarea>
-                                        </div>
 
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="mb-3">
-                                                    <label for="credit/debit" class="form-label">Credit / Debit</label>
-                                                    <select class="form-select" aria-label="Default select example">
-                                                        <option selected="">Select Credit / Debit</option>
-                                                        <option value="1">Credit</option>
-                                                        <option value="2">Debit</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-6">
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="price">Amount</label>
-                                                    <input id="price" name="price" placeholder="Enter Amount" type="number" class="form-control">
-                                                </div>
-                                            </div>
-                                        </div>
 
                                         <div class="mb-3">
                                             <label class="form-label" for="attachment">Attachment</label>
@@ -177,7 +149,7 @@ include("../../server/connection.php");
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
-            <?php include("../components/footer.php") ?>
+            <?php include("../../components/footer.php") ?>
         </div>
         <!-- end main content-->
 
@@ -186,7 +158,9 @@ include("../../server/connection.php");
 
 
 
-  
+
+    <!-- Theme Settings -->
+
 
     <!-- JAVASCRIPT -->
     <script src="<?php echo $domain ?>assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
