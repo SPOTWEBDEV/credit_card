@@ -2,14 +2,14 @@
      <!-- LOGO -->
      <div class="navbar-brand-box">
          <!-- Dark Logo-->
-         <a href="index.html" class="logo logo-dark">
+         <!-- <a href="index.html" class="logo logo-dark">
              <span class="logo-sm">
                  <img src="<?php echo $domain ?>assets/images/logo-sm.png" alt="" height="22">
              </span>
              <span class="logo-lg">
                  <img src="<?php echo $domain ?>assets/images/logo-dark.png" alt="" height="21">
              </span>
-         </a>
+         </a> -->
          <!-- Light Logo-->
          <a href="index.html" class="logo logo-light">
              <span class="logo-sm">
@@ -32,10 +32,11 @@
              <ul class="navbar-nav" id="navbar-nav">
                  <li class="menu-title"><span data-key="t-menu">Menu</span></li>
                  <li class="nav-item">
-                     <a class="nav-link menu-link" href="index.html">
+                     <a class="nav-link menu-link" href="<?php echo $domain?>user/dashboard/index.php/">
                          <i class="las la-house-damage"></i> <span data-key="t-dashboard">Dashboard</span>
                      </a>
                  </li>
+
 
 
                  <li class="nav-item">
@@ -45,46 +46,44 @@
                      <div class="collapse menu-dropdown" id="sidebarInvoiceManagement">
                          <ul class="nav nav-sm flex-column">
                              <li class="nav-item">
-                                 <a href="invoice.html" class="nav-link" data-key="t-invoice"> Request</a>
+                                 <a href="<?php echo $domain?>user/deposit/index.php/" class="nav-link" data-key="t-invoice"> Request</a>
                              </li>
 
                              <li class="nav-item">
-                                 <a href="invoice-add.html" class="nav-link" data-key="t-add-invoice"> History</a>
+                                 <a href="<?php echo $domain?>user/deposit/proof/index.php/" class="nav-link" data-key="t-add-invoice"> History </a>
                              </li>
-
-
 
                          </ul>
                      </div>
                  </li>
 
-               
+
 
 
 
 
 
                  <li class="nav-item">
-                     <a class="nav-link menu-link" href="#sidebarTables" >
+                     <a class="nav-link menu-link" href="<?php echo $domain?>user/purchase/index.php/">
                          <i class="las la-table"></i> <span data-key="t-tables">Purchase</span>
                      </a>
-         
+
                  </li>
 
 
 
                  <li class="nav-item">
-                     <a class="nav-link menu-link" href="#sidebarIcons" >
+                     <a class="nav-link menu-link" href="<?php echo $domain?>user/my-card/index.php/">
                          <i class="las la-gift"></i> <span data-key="t-icons">My Card</span>
                      </a>
-                  
+
                  </li>
 
-                   <li class="nav-item">
-                     <a class="nav-link menu-link" href="#sidebarAuthentication" >
+                 <li class="nav-item">
+                     <a class="nav-link menu-link" href="<?php echo $domain?>user/setting/index.php/">
                          <i class="las la-cog"></i> <span data-key="t-authentication">Setting</span>
                      </a>
-                  
+
                  </li>
 
 
