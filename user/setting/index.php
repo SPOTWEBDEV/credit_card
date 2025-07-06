@@ -100,42 +100,34 @@ include("../../server/connection.php");
                             <div class="card">
                                 <div class="card-body">
                                     <form>
-                                        <div class="mb-3">
-                                            <label class="form-label" for="desc">Description</label>
-                                            <textarea class="form-control" id="desc" placeholder="Enter Description" rows="3"></textarea>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-lg-6">
+                                           <div class="col-lg-12">
                                                 <div class="mb-3">
-                                                    <label for="credit/debit" class="form-label">Credit / Debit</label>
-                                                    <select class="form-select" aria-label="Default select example">
-                                                        <option selected="">Gender</option>
-                                                        <option value="1">male</option>
-                                                        <option value="2">Female</option>
-                                                    </select>
+                                                    <label class="form-label" for="price">Name</label>
+                                                    <input id="price" name="price" placeholder="Enter Amount" type="text" class="form-control">
                                                 </div>
                                             </div>
-
-                                            <div class="col-lg-6">
+                                                <div class="col-lg-12">
                                                 <div class="mb-3">
-                                                    <label class="form-label" for="price">Amount</label>
-                                                    <input id="price" name="price" placeholder="Enter Amount" type="number" class="form-control">
+                                                    <label class="form-label" for="price">Username</label>
+                                                    <input id="price" name="price" placeholder="Enter Amount" type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                                <div class="col-lg-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="price">Email</label>
+                                                    <input id="price" name="price" placeholder="Enter Email address" type="number" class="form-control">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="price">Phone number</label>
+                                                    <input id="price" name="price" placeholder="Enter phone number" type="number" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="mb-3">
-                                            <label class="form-label" for="attachment">Profile Photo</label>
-                                            <div class="dropzone my-dropzone">
-                                                <div class="dz-message">
-                                                    <div class="mb-3"> <i
-                                                            class="display-4 text-muted ri-upload-cloud-2-fill"></i>
-                                                    </div>
-                                                    <h5>Drop files here or click to upload.</h5>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </form>
 
                                     <ul class="list-unstyled mb-0" id="dropzone-preview">
