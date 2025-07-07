@@ -2,12 +2,7 @@
 
 include('../server/connection.php');
 
-$connection = mysqli_connect('localhost','root','','credit_card');
 
-
-if(!$connection){
-    die('Server Error => ERROR 500 ');
-}
 
 
 
@@ -29,8 +24,6 @@ if(isset($_POST['register'])){
         $statement  = "INSERT INTO `users`(username,email,password) VALUES ('$username','$email','$hashing')";
 
         $query = mysqli_query($connection, $statement);
-
-
         if($query){
            echo "<script>
            alert('Register Successful')

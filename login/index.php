@@ -1,8 +1,6 @@
 <?php 
 include("../server/connection.php");
 
-$connection = mysqli_connect('localhost','root','','credit_card');
-
 
 if(isset($_POST['login'])){
     $username = $_POST['username'];
