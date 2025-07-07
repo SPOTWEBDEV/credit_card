@@ -117,29 +117,7 @@ if(isset($_POST['login'])){
                                                                     <button name="login" class="btn btn-primary w-100" type="submit">Log In</button>
                                                                 </div>
                     
-                                                                <div class="mt-4 text-center">
-                                                                    <div class="signin-other-title">
-                                                                        <h5 class="fs-15 mb-3 title">Sign in with</h5>
-                                                                    </div>
-                                    
-                                                                    <ul class="list-inline">
-                                                                        <li class="list-inline-item">
-                                                                            <a href="javascript:void()" class="social-list-item bg-primary text-white border-primary">
-                                                                                <i class="mdi mdi-facebook"></i>
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="list-inline-item">
-                                                                            <a href="javascript:void()" class="social-list-item bg-info text-white border-info">
-                                                                                <i class="mdi mdi-twitter"></i>
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="list-inline-item">
-                                                                            <a href="javascript:void()" class="social-list-item bg-danger text-white border-danger">
-                                                                                <i class="mdi mdi-google"></i>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
+                                                               
                     
                                                                 <div class="mt-4 text-center">
                                                                     <p class="mb-0"> have an account ? <a href="<?php echo $domain ?>register/index.php" class="fw-medium text-primary text-decoration-underline"> Signup now </a> </p>
@@ -166,36 +144,26 @@ if(isset($_POST['login'])){
                                                                     <div class="carousel-inner mx-auto">
                                                                         <div class="carousel-item active">
                                                                             <div class="testi-contain text-center">
-                                                                                <h5 class="fs-20 text-white mb-0">“I feel confident
-                                                                                    imposing
-                                                                                    on myself”
+                                                                                <h5 class="fs-20 text-white mb-0">“I feel confident using my credit card here—every purchase is simple and secure!”
                                                                                 </h5>
-                                                                                <p class="fs-15 text-white-50 mt-2 mb-0">Vestibulum auctor orci in risus iaculis consequat suscipit felis rutrum aliquet iaculis
-                                                                                    augue sed tempus In elementum ullamcorper lectus vitae pretium Nullam ultricies diam
-                                                                                    eu ultrices sagittis.</p>
+                                                                                <p class="fs-15 text-white-50 mt-2 mb-0">"Since I started using this website, I’ve been able to make purchases easily and manage my credit card seamlessly. The platform is secure, fast, and user-friendly—it simplifies transactions and keeps my financial details safe. Highly recommend!"</p>
                                                                             </div>
                                                                         </div>
                         
                                                                         <div class="carousel-item">
                                                                             <div class="testi-contain text-center">
-                                                                                <h5 class="fs-20 text-white mb-0">“Our task must be to
-                                                                                    free widening circle”</h5>
+                                                                                <h5 class="fs-20 text-white mb-0">“Highlighting Rewards/Cashback”</h5>
                                                                                 <p class="fs-15 text-white-50 mt-2 mb-0">
-                                                                                    Curabitur eget nulla eget augue dignissim condintum Nunc imperdiet ligula porttitor commodo elementum
-                                                                                    Vivamus justo risus fringilla suscipit faucibus orci luctus
-                                                                                    ultrices posuere cubilia curae ultricies cursus.
+                                                                               "Ever since I started using this website with my credit card, I’ve earned amazing rewards on every purchase! The process is smooth, and I love how quickly my cashback adds up. It’s become my go-to for safe, rewarding transactions."
                                                                                 </p>
                                                                             </div>
                                                                         </div>
                         
                                                                         <div class="carousel-item">
                                                                             <div class="testi-contain text-center">
-                                                                                <h5 class="fs-20 text-white mb-0">“I've learned that
-                                                                                    people forget what you”</h5>
+                                                                                <h5 class="fs-20 text-white mb-0">“Security & Convenience Focus”</h5>
                                                                                 <p class="fs-15 text-white-50 mt-2 mb-0">
-                                                                                    Pellentesque lacinia scelerisque arcu in aliquam augue molestie rutrum Fusce dignissim dolor id auctor accumsan
-                                                                                    vehicula dolor
-                                                                                    vivamus feugiat odio erat sed  quis Donec nec scelerisque magna
+                                                                                  "Using this website with my credit card has been a game-changer. The fraud protection gives me peace of mind, and the one-click checkout saves so much time. I’ve never had a single issue—just fast, secure purchases!"
                                                                                 </p>
                                                                             </div>
                                                                         </div>
