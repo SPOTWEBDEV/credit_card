@@ -10,7 +10,7 @@ include("../../server/connection.php");
 <head>
 
     <meta charset="utf-8" />
-    <title>User | Invoika - Admin & Dashboard Template</title>
+    <title>Contact Message List | <?php echo $sitename ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -64,8 +64,8 @@ include("../../server/connection.php");
         <!-- ========== App Menu ========== -->
         <div class="app-menu navbar-menu">
             <!-- LOGO -->
-          
-            <?php include ("../include/sidenav.php") ?>
+
+            <?php include("../include/sidenav.php") ?>
 
             <div class="sidebar-background"></div>
         </div>
@@ -78,104 +78,100 @@ include("../../server/connection.php");
         <!-- ============================================================== -->
         <div class="main-content">
 
-        <div class="page-content">
-    <div class="container-fluid">
+            <div class="page-content">
+                <div class="container-fluid">
 
-        <!-- Page Title -->
-        <div class="row">
-            <div class="col-12">
-                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">User</h4>
-                    <div class="page-title-right">
-                        <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item"><a href="#">User</a></li>
-                            <li class="breadcrumb-item active">User</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Page Title -->
-
-        <!-- Filters -->
-        <div class="row pb-4 gy-3">
-            <div class="col-sm-4">
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addpaymentModal">
-                    <i class="las la-plus me-1"></i> Add New
-                </button>
-            </div>
-            <div class="col-sm-auto ms-auto">
-                <div class="d-flex gap-3">
-                    <input type="text" class="form-control" id="searchBox" placeholder="Search for Result">
-                    <select id="pageSize" class="form-select w-auto">
-                        <option value="5">5</option>
-                        <option value="10" selected>10</option>
-                        <option value="20">20</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <!-- Table -->
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="table-responsive table-card">
-                            <table class="table table-hover table-nowrap align-middle mb-0">
-                                <thead>
-                                    <tr class="text-muted text-uppercase">
-                                        <th scope="col">ID</th>
-                                        <th scope="col">Username</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">Date</th>
-                                        <th scope="col">Subject</th>
-                                        <th scope="col">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="userTableBody">
-                                    <!-- Data from AJAX -->
-                                </tbody>
-                            </table>
+                    <!-- Page Title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0">All Contact Message</h4>
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                                        <li class="breadcrumb-item active">All Contact Message</li>
+                                    </ol>
+                                </div>
+                            </div>
                         </div>
-                        <nav class="mt-3">
-                            <ul class="pagination justify-content-end mb-0" id="pagination">
-                                <!-- Pagination buttons -->
-                            </ul>
-                        </nav>
                     </div>
+                    <!-- End Page Title -->
+
+                    <!-- Filters -->
+                    <div class="row pb-4 gy-3">
+
+                        <div class="col-sm-auto ms-auto">
+                            <div class="d-flex gap-3">
+                                <input type="text" class="form-control" id="searchBox" placeholder="Search for Result">
+                                <select id="pageSize" class="form-select w-auto">
+                                    <option value="5">5</option>
+                                    <option value="10" selected>10</option>
+                                    <option value="20">20</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Table -->
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="table-responsive table-card">
+                                        <table class="table table-hover table-nowrap align-middle mb-0">
+                                            <thead>
+                                                <tr class="text-muted text-uppercase">
+                                                    <th scope="col">ID</th>
+                                                    <th scope="col">Username</th>
+                                                    <th scope="col">Email</th>
+                                                    <th scope="col">Date</th>
+                                                    <th scope="col">Subject</th>
+                                                    <th scope="col">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="userTableBody">
+                                                <!-- Data from AJAX -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <nav class="mt-3">
+                                        <ul class="pagination justify-content-end mb-0" id="pagination">
+                                            <!-- Pagination buttons -->
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
 
-    </div>
-</div>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+                $(function() {
+                    let currentPage = 1;
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(function () {
-    let currentPage = 1;
+                    function loadUsers(page = 1) {
+                        const search = $('#searchBox').val();
+                        const limit = $('#pageSize').val();
 
-    function loadUsers(page = 1) {
-        const search = $('#searchBox').val();
-        const limit = $('#pageSize').val();
+                        $.ajax({
+                            url: '../../server/admin/api/getContact.php',
+                            method: 'GET',
+                            data: {
+                                page: page,
+                                limit: limit,
+                                search: search
+                            },
+                            success: function(res) {
+                                const tbody = $('#userTableBody').empty();
 
-        $.ajax({
-            url: '../../server/admin/api/getContact.php',
-            method: 'GET',
-            data: {
-                page: page,
-                limit: limit,
-                search: search
-            },
-            success: function (res) {
-                const tbody = $('#userTableBody').empty();
-
-                if (res.data.length === 0) {
-                    tbody.append('<tr><td colspan="5" class="text-center">No records found</td></tr>');
-                } else {
-                    res.data.forEach(user => {
-                        tbody.append(`
+                                if (res.data.length === 0) {
+                                    tbody.append('<tr><td colspan="5" class="text-center">No records found</td></tr>');
+                                } else {
+                                    res.data.forEach(user => {
+                                        tbody.append(`
                             <tr>
                                 <td>${user.id}</td>
                                 <td>${user.username}</td>
@@ -188,66 +184,66 @@ $(function () {
                                 </td>
                             </tr>
                         `);
-                    });
-                }
+                                    });
+                                }
 
-                // Build pagination
-                const pagination = $('#pagination').empty();
-                const totalPages = Math.ceil(res.total / res.limit);
+                                // Build pagination
+                                const pagination = $('#pagination').empty();
+                                const totalPages = Math.ceil(res.total / res.limit);
 
-                pagination.append(`<li class="page-item ${res.page === 1 ? 'disabled' : ''}">
+                                pagination.append(`<li class="page-item ${res.page === 1 ? 'disabled' : ''}">
                     <a class="page-link pageBtn" href="#" data-page="${res.page - 1}">Previous</a>
                 </li>`);
 
-                for (let i = 1; i <= totalPages; i++) {
-                    pagination.append(`<li class="page-item ${i === res.page ? 'active' : ''}">
+                                for (let i = 1; i <= totalPages; i++) {
+                                    pagination.append(`<li class="page-item ${i === res.page ? 'active' : ''}">
                         <a class="page-link pageBtn" href="#" data-page="${i}">${i}</a>
                     </li>`);
-                }
+                                }
 
-                pagination.append(`<li class="page-item ${res.page === totalPages ? 'disabled' : ''}">
+                                pagination.append(`<li class="page-item ${res.page === totalPages ? 'disabled' : ''}">
                     <a class="page-link pageBtn" href="#" data-page="${res.page + 1}">Next</a>
                 </li>`);
-            },
-            error: function (error) {
-                console.log(error);
-                
-                $('#userTableBody').html(`<tr><td colspan="5" class="text-center text-danger">Error loading data => ${error.responseText
+                            },
+                            error: function(error) {
+                                console.log(error);
+
+                                $('#userTableBody').html(`<tr><td colspan="5" class="text-center text-danger">Error loading data => ${error.responseText
                 || error.message}</td></tr>`);
-            }
-        });
-    }
+                            }
+                        });
+                    }
 
-    // Initial load
-    loadUsers();
+                    // Initial load
+                    loadUsers();
 
-    // Pagination click
-    $(document).on('click', '.pageBtn', function (e) {
-        e.preventDefault();
-        const targetPage = $(this).data('page');
-        if (targetPage > 0) {
-            currentPage = targetPage;
-            loadUsers(currentPage);
-        }
-    });
+                    // Pagination click
+                    $(document).on('click', '.pageBtn', function(e) {
+                        e.preventDefault();
+                        const targetPage = $(this).data('page');
+                        if (targetPage > 0) {
+                            currentPage = targetPage;
+                            loadUsers(currentPage);
+                        }
+                    });
 
-    // Search
-    $('#searchBox').on('input', function () {
-        currentPage = 1;
-        loadUsers(currentPage);
-    });
+                    // Search
+                    $('#searchBox').on('input', function() {
+                        currentPage = 1;
+                        loadUsers(currentPage);
+                    });
 
-    // Page size
-    $('#pageSize').on('change', function () {
-        currentPage = 1;
-        loadUsers(currentPage);
-    });
-});
-</script>
+                    // Page size
+                    $('#pageSize').on('change', function() {
+                        currentPage = 1;
+                        loadUsers(currentPage);
+                    });
+                });
+            </script>
 
             <!-- End Page-content -->
 
-            <?php include ("../include/footer.php") ?>
+            <?php include("../include/footer.php") ?>
         </div>
         <!-- end main content-->
 
