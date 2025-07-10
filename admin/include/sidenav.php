@@ -29,50 +29,33 @@
           <ul class="navbar-nav" id="navbar-nav">
               <li class="menu-title"><span data-key="t-menu">Menu</span></li>
               <li class="nav-item">
-                  <a class="nav-link menu-link" href="index.html">
+                  <a class="nav-link menu-link" href="<?php echo $domain ?>admin/">
                       <i class="las la-house-damage"></i> <span data-key="t-dashboard">Dashboard</span>
                   </a>
               </li>
 
               <li class="nav-item">
-                  <a class="nav-link menu-link" href="<?php echo $domain?>admin/user/index.php">
+                  <a class="nav-link menu-link" href="<?php echo $domain ?>admin/user/index.php">
                       <i class="las la-house-damage"></i> <span data-key="t-dashboard">User</span>
                   </a>
               </li>
 
 
               <li class="nav-item">
-                  <a class="nav-link menu-link" href="#sidebarInvoiceManagement" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarInvoiceManagement">
+                  <a class="nav-link menu-link" href="<?php echo $domain ?>admin/deposit-history" aria-controls="sidebarInvoiceManagement">
                       <i class="las la-file-invoice"></i> <span data-key="t-invoices">Deposit</span>
                   </a>
-                  <div class="collapse menu-dropdown" id="sidebarInvoiceManagement">
-                      <ul class="nav nav-sm flex-column">
-                          <li class="nav-item">
-                              <a href="invoice.html" class="nav-link" data-key="t-invoice"> Approved</a>
-                          </li>
 
-                          <li class="nav-item">
-                              <a href="<?php echo $domain?>admin/deposit-history/index.php" class="nav-link" data-key="t-add-invoice"> Pending </a>
-                          </li>
-
-
-                          <li class="nav-item">
-                              <a href="invoice-details.html" class="nav-link" data-key="t-invoice-details"> Declined </a>
-                          </li>
-
-
-                      </ul>
-                  </div>
               </li>
 
               <li class="nav-item">
-                  <a class="nav-link menu-link" href="<?php echo $domain?>admin/purchase/index.php">
+                  <a class="nav-link menu-link" href="<?php echo $domain ?>admin/purchase/index.php">
                       <i class="las la-cog"></i> <span data-key="t-authentication">Purchase</span>
                   </a>
 
               </li>
 
-              <a class="nav-link menu-link" href="<?php echo $domain?>admin/contact/index.php">
+              <a class="nav-link menu-link" href="<?php echo $domain ?>admin/contact/index.php">
                   <i class="las la-file-invoice"></i> <span data-key="t-invoices">Contact</span>
               </a>
 

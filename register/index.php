@@ -6,7 +6,7 @@ include('../server/connection.php');
 
 
 
-if (isset($_POST['register'])) {
+if(isset($_POST['register'])){
 
     // grabing the user inputs
     $email = $_POST['email'];
@@ -15,27 +15,36 @@ if (isset($_POST['register'])) {
 
 
     // checking if the input is empty
-    if (!empty($email) && !empty($username) && !empty($password)) {
+    if(!empty($email) && !empty($username) && !empty($password)){
 
-        $hashing  = password_hash($password, PASSWORD_DEFAULT);
+ $hashing  = password_hash($password , PASSWORD_DEFAULT);
 
-
+        
 
         $statement  = "INSERT INTO `users`(username,email,password) VALUES ('$username','$email','$hashing')";
-
         $query = mysqli_query($connection, $statement);
-        if ($query) {
-            echo "<script>
+        if($query){
+           echo "<script>
            alert('Register Successful')
            window.location.href = '../login/'
 
            </script>";
-        } else {
+        }else{
             echo "<script>alert('Something Went Wrong')</script>";
         }
-    } else {
+
+
+
+    }else{
         echo "<script>alert('Input is empty')</script>";
     }
+
+
+
+
+
+
+    
 }
 
 
@@ -62,6 +71,9 @@ if (isset($_POST['register'])) {
     <link href="<?php echo $domain ?>/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="<?php echo $domain ?>/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- Add this in the <head> or before </body> -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 </head>
 
