@@ -1,5 +1,6 @@
 <?php
 include("../../server/connection.php");
+include("../../server/client/auth/index.php");
 
 ?>
 
@@ -37,7 +38,7 @@ include("../../server/connection.php");
 
     <!-- Begin page -->
     <div id="layout-wrapper">
-<?php include ("../components/navbar.php") ?>
+        <?php include("../components/navbar.php") ?>
 
         <!-- removeNotificationModal -->
         <div id="removeNotificationModal" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
@@ -100,80 +101,52 @@ include("../../server/connection.php");
                             <div class="card">
                                 <div class="card-body">
                                     <form>
-                                           <div class="col-lg-12">
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="price">Name</label>
-                                                    <input id="price" name="price" placeholder="Enter Amount" type="text" class="form-control">
-                                                </div>
+                                        
+                                        <div class="col-lg-12">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="price">Username</label>
+                                                <input id="price" name="price" value="<?php echo $userDetail['username'] ?>" type="text" class="form-control">
                                             </div>
-                                                <div class="col-lg-12">
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="price">Username</label>
-                                                    <input id="price" name="price" placeholder="Enter Amount" type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                                <div class="col-lg-12">
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="price">Email</label>
-                                                    <input id="price" name="price" placeholder="Enter Email address" type="number" class="form-control">
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-lg-12">
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="price">Phone number</label>
-                                                    <input id="price" name="price" placeholder="Enter phone number" type="number" class="form-control">
-                                                </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="price">Email</label>
+                                                <input id="price" name="price" value="<?php echo $userDetail['email'] ?>" type="email" class="form-control">
                                             </div>
                                         </div>
 
-                                    </form>
 
-                                    <ul class="list-unstyled mb-0" id="dropzone-preview">
-                                        <li class="mt-2" id="dropzone-preview-list">
-                                            <!-- This is used as the file preview template -->
-                                            <div class="border rounded">
-                                                <div class="d-flex p-2">
-                                                    <div class="flex-shrink-0 me-3">
-                                                        <div class="avatar-sm bg-light rounded">
-                                                            <img data-dz-thumbnail class="img-fluid rounded d-block" src="<?php echo $domain ?>assets/images/new-document.png" alt="Dropzone-Image" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="flex-grow-1">
-                                                        <div class="pt-1">
-                                                            <h5 class="fs-14 mb-1" data-dz-name>&nbsp;</h5>
-                                                            <p class="fs-13 text-muted mb-0" data-dz-size></p>
-                                                            <strong class="error text-danger" data-dz-errormessage></strong>
-                                                        </div>
-                                                    </div>
-                                                    <div class="flex-shrink-0 ms-3">
-                                                        <button data-dz-remove class="btn btn-sm btn-danger">Delete</button>
-                                                    </div>
-                                                </div>
+                                        <div class="col-lg-12">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="price">Phone number</label>
+                                                <input id="price" name="price" value="<?php echo $userDetail['phone'] ?>" type="number" class="form-control">
                                             </div>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                </div>
 
-                                    <div class="hstack gap-2 mt-4 ps-3 pb-4">
-                                        <button type="submit" class="btn btn-primary">Pay Now</button>
-                                        <button type="button" class="btn btn-light">Discard</button>
-                                    </div>
+                                </form>
+
+                                
+
+                                <div class="hstack gap-2 mt-4 ps-3 pb-4">
+                                    <button type="submit" name="save" class="btn btn-primary">Save</button>
+                                    <button type="button" onclick="window.reload()" class="btn btn-light">Discard</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-                <!-- container-fluid -->
+
+
             </div>
-            <!-- End Page-content -->
-            <?php include("../components/footer.php") ?>
-
-
+            <!-- container-fluid -->
         </div>
-        <!-- end main content-->
+        <!-- End Page-content -->
+        <?php include("../components/footer.php") ?>
+
+
+    </div>
+    <!-- end main content-->
 
     </div>
     <!-- END layout-wrapper -->
@@ -198,7 +171,7 @@ include("../../server/connection.php");
 
 
     <!-- Theme Settings -->
-   
+
     <!-- JAVASCRIPT -->
     <script src="<?php echo $domain ?>assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="<?php echo $domain ?>assets/libs/simplebar/simplebar.min.js"></script>

@@ -10,5 +10,7 @@ if(!$connection){
     die('Server Error => ERROR 500 ');
 }
 
+session_start();
+
 
 ?>
