@@ -88,13 +88,6 @@
 
 
 
-                 <div class="help-box text-center">
-                     <img src="<?php echo $domain ?>assets/images/create-invoice.png" class="img-fluid" alt="">
-                     <p class="mb-3 mt-2 text-muted">Upgrade To Pro For More Features</p>
-                     <div class="mt-3">
-                         <a href="invoice-add.html" class="btn btn-primary"> Create Invoice</a>
-                     </div>
-                 </div>
 
              </ul>
          </div>
