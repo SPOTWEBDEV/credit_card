@@ -118,7 +118,7 @@ if(isset($_POST['register'])){
                                                         </div>
 
                                                         <div class="fs-16 pb-2">
-                                                            <p class="mb-0 fs-14 text-muted fst-italic">By registering you agree to the Invoika <a href="#" class="text-primary text-decoration-underline fst-normal fw-medium">Terms of Use</a></p>
+                                                            <p class="mb-0 fs-14 text-muted fst-italic">By registering you agree to the Credit card <a href="#" class="text-primary text-decoration-underline fst-normal fw-medium">Terms of Use</a></p>
                                                         </div>
 
                                                         <div class="mt-2">

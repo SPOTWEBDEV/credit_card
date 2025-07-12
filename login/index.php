@@ -74,7 +74,7 @@ if(isset($_POST['login'])){
                                     <div class="text-center mb-5">
                                         <a href="index.html">
                                             <span class="logo-lg">
-                                                <img src="<?php echo $domain ?>assets/images/logo-dark.png" alt="" height="21">
+                                                <!-- <img src="<?php echo $domain ?>assets/images/logo-dark.png" alt="" height="21"> -->
                                             </span>
                                         </a>
                                     </div>
@@ -106,7 +106,7 @@ if(isset($_POST['login'])){
                                                                 <div class="form-check form-check-primary fs-16 py-2">
                                                                     <input class="form-check-input" type="checkbox" id="remember-check">
                                                                     <div class="float-end">
-                                                                        <a href="auth-resetpassword.html" class="text-muted text-decoration-underline fs-14">Forgot your password?</a>
+                                                                          
                                                                     </div>
                                                                     <label class="form-check-label fs-14" for="remember-check">
                                                                         Remember me
@@ -182,7 +182,7 @@ if(isset($_POST['login'])){
                                     
                                     <div class="mt-5 text-center">
                                         <p class="mb-0 text-muted">©
-                                            <script>document.write(new Date().getFullYear())</script> Invoika. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand
+                                            <script>document.write(new Date().getFullYear())</script> All Rights Are Reserved. 
                                         </p>
                                     </div>
                                 </div>
