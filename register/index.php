@@ -94,7 +94,7 @@ if(isset($_POST['register'])){
                                             <div class="p-lg-5 p-4">
                                                 <div class="text-center">
                                                     <h5 class="mb-0">Create New Account</h5>
-                                                    <p class="text-muted mt-2">Get your free Invoika account now</p>
+                                                  
                                                 </div>
 
                                                 <div class="mt-4">
