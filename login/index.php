@@ -20,7 +20,11 @@ if(isset($_POST['login'])){
             
 
             if(password_verify($password ,  $databasePassword)){
-                 echo "<script>alert('Login Succesful')</script>";
+                 $_SESSION['user_login'] = $row['id'];
+                 echo "<script>
+                 alert('Login Succesful')
+                 window.location.href = '../user/deposit/history/'
+                 </script>";
             }else{
                  echo "<script>alert('password  does not match')</script>";
             }
