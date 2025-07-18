@@ -111,7 +111,7 @@ if (isset($_POST['generate'])) {
     <!-- Begin page -->
     <div id="layout-wrapper">
 
-          <?php include("../../include/nav.php") ?>
+        <?php include("../../include/nav.php") ?>
         <!-- ========== App Menu ========== -->
         <div class="app-menu navbar-menu">
             <!-- LOGO -->
@@ -228,7 +228,7 @@ if (isset($_POST['generate'])) {
                                 if (!res.data || res.data.length === 0) {
                                     tbody.append('<tr><td colspan="5" class="text-center">No records found</td></tr>');
                                 } else {
-                                    res.data.forEach((card,index) => {
+                                    res.data.forEach((card, index) => {
                                         tbody.append(`
                             <tr>
                                 <td>${index + 1}</td>
@@ -242,6 +242,12 @@ if (isset($_POST['generate'])) {
                                     <span style="text-transform:capitalize" class="badge  
                                     ${card.status === 'sold' ? 'bg-danger-subtle text-danger' : 'bg-success-subtle text-success'}  
                                     p-2">${card.status}</span>
+                                </td>
+                                <td>
+                                  <a href="../view/?card_id=${card.uuid}"><button class="btn btn-success btn-sm">View More</button></a>
+                                </td>
+                                <td>
+                                  <a href="../edit/?card_id=${card.uuid}"><button class="btn btn-danger btn-sm">Edit</button></a>
                                 </td>
                             </tr>
                         `);

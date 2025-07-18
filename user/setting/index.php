@@ -97,30 +97,7 @@ include("../../server/client/auth/index.php");
                         <div class="col-xl-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <?php
-
-                                    // Handle form submission
-                                    if (isset($_POST['save'])) {
-                                        $username = mysqli_real_escape_string($connection, $_POST['username']);
-                                        $email = mysqli_real_escape_string($connection, $_POST['email']);
-                                        $phone = mysqli_real_escape_string($connection, $_POST['phone']);
-
-                                        $updateQuery = "
-        UPDATE users 
-        SET username = '$username', email = '$email', phone = '$phone'
-        WHERE id = $id
-    ";
-
-                                        if (mysqli_query($connection, $updateQuery)) {
-                                            echo '<div class="alert alert-success">User updated successfully.</div>';
-
-                                            // Refresh details
-                                            $userDetail = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM users WHERE id = $id"));
-                                        } else {
-                                            echo '<div class="alert alert-danger">Failed to update user: ' . mysqli_error($connection) . '</div>';
-                                        }
-                                    }
-                                    ?>
+                                    
 
                                     <form method="POST">
                                         <div class="col-lg-12">
