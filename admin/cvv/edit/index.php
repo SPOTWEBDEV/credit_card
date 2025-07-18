@@ -205,7 +205,7 @@ if (isset($_POST['generate'])) {
 
                                                                         if ($update) {
                                                                                  echo '<div class="alert alert-success">Card updated successfully.</div>';
-                                                                                 echo "<script>setTimeout(()=>{ window.location.href='../generate/?card_id=$card_uuid'},2000)</script>";
+                                                                                 echo "<script>setTimeout(()=>{ window.location.href='../generate/'},2000)</script>";
                                                                         } else {
                                                                                  echo '<div class="alert alert-danger">Failed to update card: ' . mysqli_error($connection) . '</div>';
                                                                         }

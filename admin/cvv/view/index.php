@@ -2,6 +2,8 @@
 include("../../../server/connection.php");
 include("../../../server/client/auth/index.php");
 
+$card_uuid = $_GET['card_id'] ?? '';
+
 
 ?>
 
@@ -86,12 +88,34 @@ include("../../../server/client/auth/index.php");
                                                                                           <?php
 
 
+                                                                                           if(isset($_GET['del'])){
+
+                                                                                                   $del = $_GET['del'];
+
+                                                                                                   // Delete the card
+                                                                                                   $delete = mysqli_query($connection, "DELETE FROM cvv_cards WHERE uuid = '$del'");
+                                                                                                   echo mysqli_error($connection);
+                                                                                                   if ($delete) {
+                                                                                                            echo '<div class="alert alert-success">Card deleted successfully.</div>';
+                                                                                                            echo "<script>setTimeout(()=>{ window.location.href='../generate/'},2000)</script>";
+                                                                                                   } else {
+                                                                                                            echo '<div class="alert alert-danger">Failed to delete card: ' . mysqli_error($connection) . '</div>';
+                                                                                                   }
+
+                                                                                           }
+                                                                                        
 
 
 
 
-                                                                                          $card_uuid = $_GET['card_id'] ?? '';
-                                                                                          if (!$card_uuid) {
+
+
+                                                                                          
+                                                                                          $check = mysqli_query($connection, "SELECT * FROM cvv_cards WHERE uuid = '$card_uuid' LIMIT 1");
+                                                                                          if (!$check || mysqli_num_rows($check) === 0) {
+                                                                                                   die('<div class="alert alert-danger">Card not found.</div>');
+                                                                                          }else{
+                                                                                                    if (!$card_uuid) {
                                                                                                    echo '<div class="alert alert-danger">Invalid Card ID</div>';
                                                                                           } else {
 
@@ -176,6 +200,9 @@ include("../../../server/client/auth/index.php");
                                                                                                                                                 <a href="../edit/?card_id=<?php echo $fetchCardDetails['uuid'] ?>">
                                                                                                                                                          <button type="button" class="btn btn-secondary btn-sm">Edit Card</button>
                                                                                                                                                 </a>
+                                                                                                                                                <a href="?del=<?php echo $fetchCardDetails['uuid'] ?>">
+                                                                                                                                                         <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                                                                                                                                </a>
                                                                                                                                        </th>
                                                                                                                               </tr>
                                                                                                                      </tbody>
@@ -185,6 +212,8 @@ include("../../../server/client/auth/index.php");
                                                                                           }
 
                                                                                           ?>
+                                                                                 <?php } ?>
+                                                                                          
 
 
                                                                                  </div>
