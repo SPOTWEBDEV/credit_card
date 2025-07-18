@@ -28,11 +28,11 @@
           </div>
           <ul class="navbar-nav" id="navbar-nav">
               <li class="menu-title"><span data-key="t-menu">Menu</span></li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                   <a class="nav-link menu-link" href="<?php echo $domain ?>admin/">
                       <i class="las la-house-damage"></i> <span data-key="t-dashboard">Dashboard</span>
                   </a>
-              </li>
+              </li> -->
 
               <li class="nav-item">
                   <a class="nav-link menu-link" href="<?php echo $domain ?>admin/user/index.php">
