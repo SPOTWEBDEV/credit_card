@@ -56,7 +56,7 @@
                   <div class="collapse menu-dropdown" id="sidebarInvoiceManagement">
                       <ul class="nav nav-sm flex-column">
                           <li class="nav-item">
-                              <a href="<?php echo $domain ?>admin/cvv/generate/" class="nav-link" data-key="t-invoice"> Purchase CVV</a>
+                              <a href="<?php echo $domain ?>admin/cvv/generate/" class="nav-link" data-key="t-invoice"> Generate CVV</a>
                           </li>
 
                           <li class="nav-item">
