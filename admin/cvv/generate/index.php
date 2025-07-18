@@ -45,22 +45,28 @@ if (isset($_POST['generate'])) {
         }
 
         $cvv = str_pad(rand(0, 999), 3, '0', STR_PAD_LEFT);
-        $bin = substr($card_number, 0, 6);
-        $expiry_date = date('Y-m-d', strtotime('+3 years'));
+
+        // Generate a random 6-digit BIN
+        $bin = str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
+
+        // Generate expiry date: random between 1–3 years from today
+        $yearsToAdd = rand(1, 3);
+        $expiry_date = date('Y-m-d', strtotime("+$yearsToAdd years"));
 
         $name = $input_name ?: $namesArray[array_rand($namesArray)];
 
         $insert = mysqli_query($connection, "
-            INSERT INTO cvv_cards 
-            (card_number, cvv, bin, expiry_date, price, status, country, bank, name) 
-            VALUES 
-            ('$card_number', '$cvv', '$bin', '$expiry_date', '$price', '$status', '$country', '$bank', '$name')
-        ");
+        INSERT INTO cvv_cards 
+        (card_number, cvv, bin, expiry_date, price, status, country, bank, name) 
+        VALUES 
+        ('$card_number', '$cvv', '$bin', '$expiry_date', '$price', '$status', '$country', '$bank', '$name')
+    ");
 
         if ($insert) {
             $success++;
         }
     }
+
 
     if ($success === $count) {
         echo "<script>alert('✅ $count CVV card(s) generated successfully'); window.location.reload();</script>";

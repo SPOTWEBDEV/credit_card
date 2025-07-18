@@ -48,11 +48,23 @@
 
               </li>
 
+              
               <li class="nav-item">
-                  <a class="nav-link menu-link" href="<?php echo $domain ?>admin/purchase/index.php">
-                     <i class="las la-store-alt"></i> <span data-key="t-authentication">Purchase</span>
+                  <a class="nav-link menu-link" href="#sidebarInvoiceManagement" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarInvoiceManagement">
+                      <i class="las la-file-invoice"></i> <span data-key="t-invoices">CVV</span>
                   </a>
+                  <div class="collapse menu-dropdown" id="sidebarInvoiceManagement">
+                      <ul class="nav nav-sm flex-column">
+                          <li class="nav-item">
+                              <a href="<?php echo $domain ?>admin/cvv/generate/" class="nav-link" data-key="t-invoice"> Purchase CVV</a>
+                          </li>
 
+                          <li class="nav-item">
+                              <a href="<?php echo $domain ?>admin/cvv/generate/" class="nav-link" data-key="t-add-invoice"> CVV List </a>
+                          </li>
+
+                      </ul>
+                  </div>
               </li>
 
               <a class="nav-link menu-link" href="<?php echo $domain ?>admin/contact/index.php">

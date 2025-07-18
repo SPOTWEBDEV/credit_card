@@ -151,6 +151,7 @@ include("../../server/client/auth/index.php");
                                                     <th scope="col">Card Holder Name</th>
                                                     <th scope="col">Card Holder Number</th>
                                                     <th scope="col">CVV</th>
+                                                    <th scope="col">Bins</th>
                                                     <th scope="col">Price</th>
                                                     <th scope="col">Country</th>
                                                     <th scope="col">Bank</th>
@@ -208,6 +209,7 @@ include("../../server/client/auth/index.php");
                                 <td>${card.name}</td>
                                 <td>${card.card_number}</td>
                                 <td>${card.cvv}</td>
+                                <td>${card.bin}</td>
                                 <td>$${card.price}</td>
                                 <td>${card.country}</td>
                                 <td>${card.bank}</td>
