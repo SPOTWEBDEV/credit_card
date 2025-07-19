@@ -60,9 +60,7 @@ $sitename = "Grub Shop";
 
 
 $crypto_options = [
-    'BTC' => 'bc1qexamplebtcaddress',
-    'ETH' => '0xexampleethaddress',
-    'USDT' => 'Texampleusdtaddress'
+    'Exodus wallet' => 'bc1qgzd0yxxqsxwhdtcudnkgjqakdajdyplhtdn0q2',
 ];
 
 
