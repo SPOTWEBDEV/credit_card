@@ -187,6 +187,10 @@ if (isset($_POST['register'])) {
     </div>
 
 
+    <script src="//code.jivosite.com/widget/o9SjLOabJe" async></script>
+
+
+
     <!-- JAVASCRIPT -->
     <script src="<?php echo $domain ?>/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="<?php echo $domain ?>/assets/libs/simplebar/simplebar.min.js"></script>
