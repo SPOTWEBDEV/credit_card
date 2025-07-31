@@ -6,13 +6,13 @@ include("../../server/client/auth/index.php");
 
 <!doctype html>
 <html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="light" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable">
+
 <head>
 
     <meta charset="utf-8" />
-    <title>New Transaction | <?php echo $sitename ?> - Admin & Dashboard Template</title>
+    <title>Deposit | <?php echo $sitename ?> - Black Market CC Access</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-    <meta content="Themesbrand" name="author" />
+    <meta content="Access premium stolen credit cards, dumps, and fullz. Updated daily." name="description" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="<?php echo $domain ?>assets/images/favicon.ico">
 
@@ -99,7 +99,7 @@ include("../../server/client/auth/index.php");
 
                                     <?php
 
-                                    
+
 
 
                                     if (isset($_POST['submit'])) {
@@ -192,13 +192,13 @@ include("../../server/client/auth/index.php");
                                                             <strong class="error text-danger" data-dz-errormessage></strong>
                                                         </div>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </div>
                                         </li>
                                     </ul>
 
-                                   
+
                                 </div>
                             </div>
                         </div>

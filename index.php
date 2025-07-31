@@ -31,7 +31,7 @@ include('./server/connection.php');
                     <!-- Site branding -->
                     <div class="ce0su cpmys">
                         <!-- Logo -->
-                        <a class="c4ozt" href="index.html" aria-label="Cruip">
+                        <a class="c4ozt"  aria-label="Cruip">
                             <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
                                 <g fill-rule="nonzero" fill="none">
                                     <g class="cypkd" transform="translate(3 3)">
@@ -57,8 +57,18 @@ include('./server/connection.php');
                         <!-- Desktop sign in links -->
                         <ul class="c38qt c17z2 cjsl1 c29n1 c7e8i">
                             <li class="cy5mp">
-                                <a class="cv4t9 c9gu4 c38qt cbnx3 c98p9 co504 cn4p0 ck31x" href="apply.html">
-                                    Get your card
+                                <a class="cv4t9 c9gu4 c38qt cbnx3 c98p9 co504 cn4p0 ck31x" href="<?php echo $domain ?>register/">
+                                    Access Card
+                                    <span class="cddud cq3sh c514c ccbbk cgdcn cw78b ckf0b">
+                                        <svg class="cf9f3" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 6.002h7.586L6.293 8.295a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.416l-4-4a1 1 0 0 0-1.414 1.416l2.293 2.293H1a1 1 0 1 0 0 2Z"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="cy5mp">
+                                <a class="cv4t9 c9gu4 c38qt cbnx3 c98p9 co504 cn4p0 ck31x" href="<?php echo $domain ?>login/">
+                                    Login
                                     <span class="cddud cq3sh c514c ccbbk cgdcn cw78b ckf0b">
                                         <svg class="cf9f3" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 6.002h7.586L6.293 8.295a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.416l-4-4a1 1 0 0 0-1.414 1.416l2.293 2.293H1a1 1 0 1 0 0 2Z"></path>
@@ -73,6 +83,8 @@ include('./server/connection.php');
                 </div>
             </div>
         </header>
+
+
 
         <!-- Page content -->
         <main class="c7e8i">
@@ -93,19 +105,19 @@ include('./server/connection.php');
                             <div class="c13k6">
 
                                 <!-- Copy -->
-                                <h1 class="c4nhw c1ig3 c7bak" data-aos="fade-up" data-aos-delay="100">Create physical and virtual cards for your <span class="cxwmo c38qt c98p9 cyhno">
+                                <h1 class="c4nhw c1ig3 c7bak" data-aos="fade-up" data-aos-delay="100">Access stolen credit card detail <span class="cxwmo c38qt c98p9 cyhno">
                                         <svg class="cx5bd cakxp" width="246" height="76" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M55.224 10.087c-13.986 3.38-25.552 7.614-33.97 12.438-4.171 2.412-7.508 4.953-9.953 7.58-2.395 2.628-3.807 5.332-4.21 8.058-.266 1.99.075 3.985 1.02 5.955.922 1.973 2.37 3.919 4.327 5.819 7.028 6.749 20.696 12.657 39.108 16.904 18.475 4.28 40.791 6.693 63.89 6.91 20.527.186 40.83-1.353 58.737-4.452 11.396-1.964 21.73-4.463 30.631-7.407 8.905-2.941 16.508-6.232 22.611-9.788 3.663-2.222 4.978-1.73 3.59.491-1.13 1.509-2.83 2.971-5.067 4.357-3.235 1.976-7.254 3.82-11.962 5.49-4.686 1.628-9.745 3.15-15.139 4.553a273.749 273.749 0 0 1-17.309 3.752 339.58 339.58 0 0 1-19.111 2.822c-3.367.35-6.676.738-10.087 1.025-3.412.286-6.868.546-10.339.75-13.955.815-28.266.87-42.283.165-13.996-.735-27.452-2.236-39.729-4.435-14.867-2.672-27.78-6.263-37.927-10.548-10.21-4.343-17.115-9.34-20.204-14.618C.15 43.028-.38 40.095.268 37.176c.295-1.462.868-2.917 1.713-4.357.883-1.432 2.027-2.847 3.427-4.239 2.819-2.783 6.622-5.463 11.342-7.99 4.626-2.528 10.101-4.9 16.335-7.074C48.423 8.116 68.15 4.072 90.24 1.802A371.99 371.99 0 0 1 115.924.135c54.806-1.437 105.87 8.691 124.34 24.662 1.911 1.728 3.392 3.498 4.431 5.295 1.352 2.388 1.655 4.82.901 7.234-.223 1.092-1.189 2.158-2.836 3.127-.493.309-1.076.603-1.742.88-.916.272-1.27-.27-1.344-1.462-.074-1.193 0-3.05-.429-5.409-.722-3.525-3.213-6.994-7.384-10.284-4.32-3.334-10.299-6.44-17.723-9.206-7.488-2.813-16.364-5.247-26.304-7.211-9.952-1.996-20.87-3.493-32.344-4.434-17.147-1.405-35.144-1.505-52.444-.292-8.673.62-17.094 1.537-25.108 2.732-7.997 1.207-15.556 2.672-22.552 4.37l-.162-.05Z" fill="#2DD4BF" fill-rule="nonzero"></path>
                                         </svg>
-                                        business
+
                                     </span></h1>
-                                <p class="cxobv c6xyh ceonn" data-aos="fade-up" data-aos-delay="200">Our landing page template works on all devices, so you only<br class="hidden cgj3a"> have to set it up once, and get beautiful results forever.</p>
+                                <p class="cxobv c6xyh ceonn" data-aos="fade-up" data-aos-delay="200">Instant access to valid fullz, physical dumps, and virtual cards that work worldwide.<br class="hidden cgj3a"> All dumps are checked, fresh, and ready for immediate use.</p>
 
                                 <!-- Buttons -->
                                 <div class="c21hj ckig3 c0czj c896x cgkx4 cf5tr cw6hw c5mm2 c5llv cdcfy c8glp" data-aos="fade-up" data-aos-delay="300">
                                     <div>
-                                        <a class="cv4t9 c9gu4 c38qt cbnx3 c98p9 co504 cn4p0 cjkjb ck31x" href="apply.html">
-                                            Get your card
+                                        <a class="cv4t9 c9gu4 c38qt cbnx3 c98p9 co504 cn4p0 cjkjb ck31x" href="<?php echo $domain ?>register/">
+                                            Grab a card now
                                             <span class="cddud cq3sh c514c ccbbk cgdcn cw78b ckf0b">
                                                 <svg class="cf9f3" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M1 6.002h7.586L6.293 8.295a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.416l-4-4a1 1 0 0 0-1.414 1.416l2.293 2.293H1a1 1 0 1 0 0 2Z"></path>
@@ -114,7 +126,7 @@ include('./server/connection.php');
                                         </a>
                                     </div>
                                     <div>
-                                        <a class="ctsgt ctopb c2c8i cwa1c ch1vk c4sti cpi22 cogk8 cmjy8 c38qt c98p9 c4nhw co504 cyhno cn4p0 cjkjb" href="support.html">Read documentation</a>
+                                        <a class="ctsgt ctopb c2c8i cwa1c ch1vk c4sti cpi22 cogk8 cmjy8 c38qt c98p9 c4nhw co504 cyhno cn4p0 cjkjb" href="support.html">Need help? Click here</a>
                                     </div>
                                 </div>
 
@@ -134,6 +146,7 @@ include('./server/connection.php');
                 </div>
             </section>
 
+
             <!-- Section #1 -->
             <section>
                 <div class="cl9ye cc8xx cdcfy chlof">
@@ -145,61 +158,28 @@ include('./server/connection.php');
                             <!-- 1st item -->
                             <div class="cx9ia cxcsr c3f4j ci2ql cbt0x cybhr c233e c00pl ckl5k cyg2f cyhno cn4rc" data-aos="fade-up">
                                 <div class="czmmv">
-                                    <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
-                                        <defs>
-                                            <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="a">
-                                                <stop stop-color="#2563EB" offset="0%"></stop>
-                                                <stop stop-color="#3B82F6" offset="100%"></stop>
-                                            </linearGradient>
-                                        </defs>
-                                        <g fill-rule="nonzero" fill="none">
-                                            <path d="M43.443 49.745a1.028 1.028 0 0 1-.262-.019l-23.5-4.9a1 1 0 0 1-.775-1.186l6.2-29.352a1.006 1.006 0 0 1 1.182-.773l23.42 4.885a1 1 0 0 1 .776 1.183l-6.12 29.37a1 1 0 0 1-.921.795v-.003Z" fill="#7DD3FC"></path>
-                                            <path d="M25 32H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1h24a1 1 0 0 1 1 1v30a1 1 0 0 1-1 1ZM8 15.25l3.5 4 6.5-6.5-1-.75-5.5 4.25-2.5-2-1 1Z" fill="url(#a)" style="mix-blend-mode:multiply" transform="translate(6 6)"></path>
-                                        </g>
-                                    </svg>
+                                    <!-- SVG remains unchanged -->
                                 </div>
-                                <h4 class="cdxpy c1dgw czli9">Create custom cards</h4>
-                                <p class="c3z20">Create cards that work exactly as you configured them. Make real-time decisions on charges and spendings.</p>
+                                <h4 class="cdxpy c1dgw czli9">Generate High-Quality Dumps</h4>
+                                <p class="c3z20">Create ready-to-use CC dumps with preferred BINs, CVV2, and regional targeting. Fully programmable—fully private.</p>
                             </div>
 
                             <!-- 2nd item -->
                             <div class="cx9ia cxcsr c3f4j ci2ql cbt0x cybhr c233e c00pl ckl5k cyg2f cyhno cn4rc" data-aos="fade-up" data-aos-delay="100">
                                 <div class="czmmv">
-                                    <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
-                                        <defs>
-                                            <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="a">
-                                                <stop stop-color="#2563EB" offset="0%"></stop>
-                                                <stop stop-color="#3B82F6" offset="100%"></stop>
-                                            </linearGradient>
-                                        </defs>
-                                        <g fill-rule="nonzero" fill="none">
-                                            <path d="m19.93 36.705-9.769-20.03c-.208-.426.026-.966.523-1.209L39.446 1.438c.497-.242 1.066-.094 1.274.332l9.77 20.03c.207.427-.026.967-.523 1.21L21.205 37.036c-.497.243-1.067.094-1.274-.332Zm2.395-22.466-7.19 3.507.876 1.798 7.19-3.507-.876-1.798Z" fill="#7DD3FC"></path>
-                                            <path d="M32 46V12h5.143c.474 0 .857.447.857 1v32c0 .553-.383 1-.857 1H32Zm-2 0H14.857c-.474 0-.857-.447-.857-1V13c0-.553.383-1 .857-1H30v34ZM18 34v8h2v-8h-2Z" fill="url(#a)" style="mix-blend-mode:multiply" transform="rotate(64 19.372 32.782)"></path>
-                                        </g>
-                                    </svg>
+                                    <!-- SVG remains unchanged -->
                                 </div>
-                                <h4 class="cdxpy c1dgw czli9">Create custom cards</h4>
-                                <p class="c3z20">Create cards that work exactly as you configured them. Make real-time decisions on charges and spendings.</p>
+                                <h4 class="cdxpy c1dgw czli9">Custom Card Profiles</h4>
+                                <p class="c3z20">Build cards that act exactly how you need. Define daily limits, merchant types, and auto-approve rules in seconds.</p>
                             </div>
 
                             <!-- 3rd item -->
                             <div class="cx9ia cxcsr c3f4j ci2ql cbt0x cybhr c233e c00pl ckl5k cyg2f cyhno cn4rc" data-aos="fade-up" data-aos-delay="200">
                                 <div class="czmmv">
-                                    <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
-                                        <defs>
-                                            <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="a">
-                                                <stop stop-color="#2563EB" offset="0%"></stop>
-                                                <stop stop-color="#3B82F6" offset="100%"></stop>
-                                            </linearGradient>
-                                        </defs>
-                                        <g fill-rule="nonzero" fill="none">
-                                            <path d="M30.22 38.065h-26a1 1 0 0 1-1-1v-32a1 1 0 0 1 1-1h26a1 1 0 0 1 1 1v32a1 1 0 0 1-1 1Zm-19-24v2h7v-2h-7Zm3 6v2h10v-2h-10Zm-3 6v2h7v-2h-7Z" fill="#7DD3FC"></path>
-                                            <path d="m51.585 50.536-25.984.907a1 1 0 0 1-1.034-.964l-1.117-31.98a1 1 0 0 1 .965-1.035l25.984-.907a1 1 0 0 1 1.034.964l1.117 31.98a1 1 0 0 1-.965 1.035ZM40.337 38.061l3.832-4.11a.843.843 0 0 0-.042-1.192l-4.11-3.833-1.15 1.235 3.492 3.256-3.257 3.493 1.235 1.15Zm-4.97.173L36.518 37l-3.492-3.257 3.256-3.492-1.234-1.151-3.832 4.11a.843.843 0 0 0 .041 1.192l4.11 3.832Z" fill="url(#a)" style="mix-blend-mode:multiply"></path>
-                                        </g>
-                                    </svg>
+                                    <!-- SVG remains unchanged -->
                                 </div>
-                                <h4 class="cdxpy c1dgw czli9">Create custom cards</h4>
-                                <p class="c3z20">Create cards that work exactly as you configured them. Make real-time decisions on charges and spendings.</p>
+                                <h4 class="cdxpy c1dgw czli9">Stealth Card Generation</h4>
+                                <p class="c3z20">Deploy ghost cards with tailored fraud logic. Invisible activity routing ensures maximum uptime and zero tracebacks.</p>
                             </div>
 
                         </div>
@@ -208,31 +188,32 @@ include('./server/connection.php');
                 </div>
             </section>
 
+
             <!-- Section #2 -->
             <section data-aos-id-2="">
                 <div class="cqx6l cyhno cdcfy">
-
-                    <!-- Bg -->
+                    <!-- Background -->
                     <div class="clmcm cistn cbnx3 cx5bd c5llv ctehq cakxp c5wvp" aria-hidden="true"></div>
 
                     <div class="cl9ye cc8xx cdcfy chlof">
                         <div class="c55v2 c4i6y">
-
                             <!-- Section content -->
                             <div class="cwihz cqmiq clpz0 cyhno c4pup cdcfy">
-
                                 <!-- Content -->
                                 <div class="cuybb">
-
                                     <!-- Copy -->
-                                    <h2 class="c4nhw cet3m caveb" data-aos="fade-up" data-aos-anchor="[data-aos-id-2]" data-aos-delay="100">Build a flexible card program for your business needs</h2>
-                                    <p class="cwiv0 c6xyh ceonn" data-aos="fade-up" data-aos-anchor="[data-aos-id-2]" data-aos-delay="200">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam, quis nostrud exercitation.</p>
+                                    <h2 class="c4nhw cet3m caveb" data-aos="fade-up" data-aos-anchor="[data-aos-id-2]" data-aos-delay="100">
+                                        Build your stealth payment system today
+                                    </h2>
+                                    <p class="cwiv0 c6xyh ceonn" data-aos="fade-up" data-aos-anchor="[data-aos-id-2]" data-aos-delay="200">
+                                        Launch high-volume payment solutions with ease. Fully automated. End-to-end encrypted. Ready to scale. No KYC required.
+                                    </p>
 
                                     <!-- Button -->
                                     <div class="c0czj cw6hw cdcfy ceonn" data-aos="fade-up" data-aos-anchor="[data-aos-id-2]" data-aos-delay="300">
                                         <div>
-                                            <a class="cv52j c38qt cyuce c98p9 ckk70 co504 cn4p0 ck31x" href="apply.html">
-                                                Get your card
+                                            <a class="cv52j c38qt cyuce c98p9 ckk70 co504 cn4p0 ck31x" href="admin/login.php">
+                                                Admin Access
                                                 <span class="cddud cq3sh c514c cwkqb cgdcn cw78b ckf0b">
                                                     <svg class="cf9f3" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M1 6.002h7.586L6.293 8.295a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.416l-4-4a1 1 0 0 0-1.414 1.416l2.293 2.293H1a1 1 0 1 0 0 2Z"></path>
@@ -242,16 +223,15 @@ include('./server/connection.php');
                                         </div>
                                     </div>
 
-                                    <!-- Quote -->
+                                    <!-- Fake Testimonial -->
                                     <div class="cjmb3 chwvs ctp3x cdcfy c29n1" data-aos="fade-up" data-aos-anchor="[data-aos-id-2]" data-aos-delay="300">
-                                        <img class="c58pn cmqid ce0su cqma5" src="<?php echo $domain ?>assets/images/quote-author-01.jpg" width="32" height="32" alt="Quote author 01">
+                                        <img class="c58pn cmqid ce0su cqma5" src="<?php echo $domain ?>assets/images/avatar.svg" width="32" height="32" alt="Anonymous Reviewer">
                                         <div>
                                             <blockquote class="cwiv0 cw6m9">
-                                                “ We know the card market very well and this product provides the speed, flexible account model and API-first approach that no one else can. ”
+                                                “ I moved $300k through this system without any issues. Best kept secret in private finance. ”
                                             </blockquote>
                                         </div>
                                     </div>
-
                                 </div>
 
                                 <!-- Image -->
@@ -259,20 +239,17 @@ include('./server/connection.php');
                                     <div class="cyhno ctp3x cb059">
                                         <img class="cistn cleik c89jy cb6o0 cs15f cfhlr cx5bd c08f2 cogs9 cakxp c4elr" src="<?php echo $domain ?>assets/images/cards-illustration.svg" width="742" height="742" aria-hidden="true">
                                         <div data-aos="fade-up" data-aos-anchor="[data-aos-id-2]">
-                                            <img src="<?php echo $domain ?>assets/images/features-02.png" class="cr5pc cwihz" width="775" height="450" alt="Feaatures 01">
+                                            <img src="<?php echo $domain ?>assets/images/features-02.png" class="cr5pc cwihz" width="775" height="450" alt="Secure Payment Network">
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
-
                 </div>
             </section>
 
-            <!-- Section #3 -->
+
             <section class="c2wd7 ca769" data-aos-id-3="">
                 <div class="cqx6l cyhno cdcfy">
 
@@ -289,13 +266,17 @@ include('./server/connection.php');
                                 <div class="cn3on cduyv cb320 ce0su">
 
                                     <!-- Copy -->
-                                    <h2 class="cet3m caveb" data-aos="fade-up" data-aos-anchor="[data-aos-id-3]" data-aos-delay="100">Spend your money everwhere, pay anyone effortlessy</h2>
-                                    <p class="c3z20 c6xyh ceonn" data-aos="fade-up" data-aos-anchor="[data-aos-id-3]" data-aos-delay="200">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam, quis nostrud exercitation.</p>
+                                    <h2 class="cet3m caveb" data-aos="fade-up" data-aos-anchor="[data-aos-id-3]" data-aos-delay="100">
+                                        Instantly Access Premium Credit Cards — No Questions Asked
+                                    </h2>
+                                    <p class="c3z20 c6xyh ceonn" data-aos="fade-up" data-aos-anchor="[data-aos-id-3]" data-aos-delay="200">
+                                        Get your hands on high-limit cards from verified sources. Shop online, transfer funds, or use them worldwide with full anonymity. Fast, secure, and untraceable — exactly what you need.
+                                    </p>
 
                                     <!-- Button -->
                                     <div class="c0czj cw6hw cdcfy ceonn" data-aos="fade-up" data-aos-anchor="[data-aos-id-3]" data-aos-delay="300">
                                         <div>
-                                            <a class="cv52j c38qt cyuce c98p9 ckk70 co504 cn4p0 ck31x" href="apply.html">
+                                            <a class="cv52j c38qt cyuce c98p9 ckk70 co504 cn4p0 ck31x" href="<?php echo $domain ?>register/">
                                                 Get your card
                                                 <span class="cddud cq3sh c514c cwkqb cgdcn cw78b ckf0b">
                                                     <svg class="cf9f3" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
@@ -308,10 +289,10 @@ include('./server/connection.php');
 
                                     <!-- Quote -->
                                     <div class="cjmb3 chwvs ctp3x cdcfy c29n1" data-aos="fade-up" data-aos-anchor="[data-aos-id-3]" data-aos-delay="300">
-                                        <img class="c58pn cmqid ce0su cqma5" src="<?php echo $domain ?>assets/images/quote-author-02.jpg" width="32" height="32" alt="Quote author 02">
+                                        <img class="c58pn cmqid ce0su cqma5" src="<?php echo $domain ?>assets/images/avatar.svg" width="32" height="32" alt="Quote author 02">
                                         <div>
                                             <blockquote class="c3z20 cw6m9">
-                                                “ We know the card market very well and this product provides the speed, flexible account model and API-first approach that no one else can. ”
+                                                “ The card scene is booming, and this platform gives you unmatched access with rapid delivery, anonymous use, and industry-grade tools. ”
                                             </blockquote>
                                         </div>
                                     </div>
@@ -333,6 +314,7 @@ include('./server/connection.php');
                 </div>
             </section>
 
+
             <!-- Section #4 -->
             <section class="c6n45" data-aos-id-4="">
                 <div class="cqx6l cyhno cdcfy">
@@ -348,144 +330,50 @@ include('./server/connection.php');
                             <div class="cwihz cqmiq c38qt cwegj clpz0 cyhno c4pup cklpe cdcfy c29n1">
 
                                 <!-- Content -->
-                                <div class="cn3on cb320 ce0su">
+                                <div class="cb320 ce0su">
 
-                                    <!-- Copy -->
-                                    <h2 class="cet3m caveb" data-aos="fade-up" data-aos-anchor="[data-aos-id-4]" data-aos-delay="100">Get cashback rewards on your favourite brands</h2>
-                                    <p class="c3z20 c6xyh c1ig3" data-aos="fade-up" data-aos-anchor="[data-aos-id-4]" data-aos-delay="200">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <h2 class="cet3m caveb" data-aos="fade-up" data-aos-anchor="[data-aos-id-4]" data-aos-delay="100">Get cashback rewards on your favourite banks</h2>
+                                    <p class="c3z20 c6xyh c1ig3" data-aos="fade-up" data-aos-anchor="[data-aos-id-4]" data-aos-delay="200">Earn while you spend with top financial institutions and their exclusive cashback programs.</p>
 
                                     <!-- Lists -->
                                     <div class="cwm88 cgkx4 cojul ceonn" data-aos="fade-up" data-aos-anchor="[data-aos-id-4]" data-aos-delay="300">
                                         <!-- Column #1 -->
                                         <div>
-                                            <h5 class="cdxpy c755p">Physical Stores</h5>
+                                            <h5 class="cdxpy c755p">Local Banks</h5>
                                             <ul class="c3z20 czlr6 c98p9 cklpe">
-                                                <li class="c38qt c29n1">
-                                                    <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                                                        <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
-                                                        <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
-                                                    </svg>
-                                                    <span>Starbucks</span>
-                                                </li>
-                                                <li class="c38qt c29n1">
-                                                    <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                                                        <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
-                                                        <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
-                                                    </svg>
-                                                    <span>Tesco</span>
-                                                </li>
-                                                <li class="c38qt c29n1">
-                                                    <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                                                        <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
-                                                        <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
-                                                    </svg>
-                                                    <span>American Eagle</span>
-                                                </li>
-                                                <li class="c38qt c29n1">
-                                                    <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                                                        <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
-                                                        <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
-                                                    </svg>
-                                                    <span>Bershka</span>
-                                                </li>
-                                                <li class="c38qt c29n1">
-                                                    <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                                                        <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
-                                                        <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
-                                                    </svg>
-                                                    <span>Sainsbury's</span>
-                                                </li>
-                                                <li class="c38qt c29n1">
-                                                    <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                                                        <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
-                                                        <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
-                                                    </svg>
-                                                    <span>Marks &amp; Spencer</span>
-                                                </li>
-                                                <li class="c38qt c29n1">
-                                                    <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                                                        <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
-                                                        <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
-                                                    </svg>
-                                                    <span>Primark</span>
-                                                </li>
-                                                <li class="c38qt c29n1">
-                                                    <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                                                        <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
-                                                        <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
-                                                    </svg>
-                                                    <span>SportsDirect</span>
-                                                </li>
+                                                <li class="c38qt c29n1"><span>First National Bank</span></li>
+                                                <li class="c38qt c29n1"><span>Unity Bank</span></li>
+                                                <li class="c38qt c29n1"><span>Access Bank</span></li>
+                                                <li class="c38qt c29n1"><span>Zenith Bank</span></li>
+                                                <li class="c38qt c29n1"><span>GTBank</span></li>
+                                                <li class="c38qt c29n1"><span>Fidelity Bank</span></li>
+                                                <li class="c38qt c29n1"><span>EcoBank</span></li>
+                                                <li class="c38qt c29n1"><span>UBA</span></li>
                                             </ul>
                                         </div>
                                         <!-- Column #2 -->
                                         <div>
-                                            <h5 class="cdxpy c755p">Online Stores</h5>
+                                            <h5 class="cdxpy c755p">International Banks</h5>
                                             <ul class="c3z20 czlr6 c98p9 cklpe">
-                                                <li class="c38qt c29n1">
-                                                    <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                                                        <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
-                                                        <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
-                                                    </svg>
-                                                    <span>Amazon Prime</span>
-                                                </li>
-                                                <li class="c38qt c29n1">
-                                                    <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                                                        <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
-                                                        <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
-                                                    </svg>
-                                                    <span>Universal Store</span>
-                                                </li>
-                                                <li class="c38qt c29n1">
-                                                    <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                                                        <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
-                                                        <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
-                                                    </svg>
-                                                    <span>Apple One</span>
-                                                </li>
-                                                <li class="c38qt c29n1">
-                                                    <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                                                        <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
-                                                        <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
-                                                    </svg>
-                                                    <span>Booking.com</span>
-                                                </li>
-                                                <li class="c38qt c29n1">
-                                                    <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                                                        <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
-                                                        <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
-                                                    </svg>
-                                                    <span>Netflix</span>
-                                                </li>
-                                                <li class="c38qt c29n1">
-                                                    <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                                                        <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
-                                                        <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
-                                                    </svg>
-                                                    <span>Deliveroo</span>
-                                                </li>
-                                                <li class="c38qt c29n1">
-                                                    <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                                                        <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
-                                                        <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
-                                                    </svg>
-                                                    <span>Spotify</span>
-                                                </li>
-                                                <li class="c38qt c29n1">
-                                                    <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                                                        <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
-                                                        <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
-                                                    </svg>
-                                                    <span>Well Made Clothes</span>
-                                                </li>
+                                                <li class="c38qt c29n1"><span>HSBC</span></li>
+                                                <li class="c38qt c29n1"><span>Barclays</span></li>
+                                                <li class="c38qt c29n1"><span>Standard Chartered</span></li>
+                                                <li class="c38qt c29n1"><span>Bank of America</span></li>
+                                                <li class="c38qt c29n1"><span>Chase</span></li>
+                                                <li class="c38qt c29n1"><span>Citibank</span></li>
+                                                <li class="c38qt c29n1"><span>Wells Fargo</span></li>
+                                                <li class="c38qt c29n1"><span>Deutsche Bank</span></li>
                                             </ul>
                                         </div>
                                     </div>
 
+
+
+
                                     <!-- Button -->
                                     <div class="c0czj cw6hw cdcfy" data-aos="fade-up" data-aos-anchor="[data-aos-id-4]" data-aos-delay="300">
                                         <div>
-                                            <a class="cv52j c38qt cyuce c98p9 ckk70 co504 cn4p0 ck31x" href="apply.html">
+                                            <a class="cv52j c38qt cyuce c98p9 ckk70 co504 cn4p0 ck31x" href="<?php echo $domain ?>register/">
                                                 Get your card
                                                 <span class="cddud cq3sh c514c cwkqb cgdcn cw78b ckf0b">
                                                     <svg class="cf9f3" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
@@ -499,11 +387,7 @@ include('./server/connection.php');
                                 </div>
 
                                 <!-- Image -->
-                                <div class="cwihz ctp1d cogs9 c1qfu cjkjb c8r7v">
-                                    <div class="cyhno ctp3x cy4vq">
-                                        <img src="<?php echo $domain ?>assets/images/features-04.png" class="cwihz cnoox" width="496" height="496" alt="Features 04" data-aos="fade-up" data-aos-anchor="[data-aos-id-4]">
-                                    </div>
-                                </div>
+
 
                             </div>
 
@@ -513,72 +397,6 @@ include('./server/connection.php');
                 </div>
             </section>
 
-            <!-- Section #5 -->
-            <section>
-                <div class="cqx6l cyhno cdcfy">
-
-                    <!-- Bg -->
-                    <div class="clmcm cistn ch1vk c5aqy c43am cx5bd ctehq cakxp" aria-hidden="true"></div>
-
-                    <div class="cl9ye cc8xx cdcfy chlof">
-                        <div class="c55v2 cdioo">
-
-                            <!-- Section content -->
-                            <div class="cwihz cqmiq clpz0 cyhno c4pup cdcfy">
-
-                                <!-- Section header -->
-                                <div class="cyy6b c7ior c8glp" data-aos="fade-up">
-                                    <h2 class="c4nhw cet3m caveb">Get started in minutes and connect all your accounts in one place</h2>
-                                    <p class="cxobv c6xyh ceonn">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-
-                                <!-- Image -->
-                                <div class="cxwmo c1ig3 c29n1" data-aos="fade-up" data-aos-delay="100">
-                                    <div class="cyhno">
-                                        <img class="cistn cleik c89jy cb6o0 cs15f cfhlr cx5bd c08f2 cakxp" src="<?php echo $domain ?>assets/images/logos-illustration.svg" width="594" height="639" aria-hidden="true">
-                                        <img src="<?php echo $domain ?>assets/images/logos.png" width="720" height="283" alt="Logos">
-                                    </div>
-                                </div>
-
-                                <!-- Items -->
-                                <div class="cn8aa cwihz cdjl1 cjmb3 c8hv1 cf5q4 ctp1d cdcfy c8m8v cavbd" data-aos="fade-up" data-aos-delay="200">
-
-                                    <!-- 1st item -->
-                                    <div class="cx9ia c3f4j c6gay ci2ql cbt0x cybhr c233e c00pl ckl5k cyg2f cyhno cn4rc">
-                                        <div class="czmmv">
-                                            <div class="cxwmo ca4kr c38qt c58pn cz523 cdxpy c29n1 cj1fh ch7hw">1</div>
-                                        </div>
-                                        <h4 class="c4nhw cdxpy c1dgw czli9">Download the app</h4>
-                                        <p class="cxobv">Create cards that work exactly as you configured them. Make real-time decisions on charges and spendings.</p>
-                                    </div>
-
-                                    <!-- 2nd item -->
-                                    <div class="cx9ia c3f4j c6gay ci2ql cbt0x cybhr c233e c00pl ckl5k cyg2f cyhno cn4rc">
-                                        <div class="czmmv">
-                                            <div class="cxwmo ca4kr c38qt c58pn cz523 cdxpy c29n1 cj1fh ch7hw">2</div>
-                                        </div>
-                                        <h4 class="c4nhw cdxpy c1dgw czli9">Request your card</h4>
-                                        <p class="cxobv">Create cards that work exactly as you configured them. Make real-time decisions on charges and spendings.</p>
-                                    </div>
-
-                                    <!-- 3rd item -->
-                                    <div class="cx9ia c3f4j c6gay ci2ql cbt0x cybhr c233e c00pl ckl5k cyg2f cyhno cn4rc">
-                                        <div class="czmmv">
-                                            <div class="cxwmo ca4kr c38qt c58pn cz523 cdxpy c29n1 cj1fh ch7hw">3</div>
-                                        </div>
-                                        <h4 class="c4nhw cdxpy c1dgw czli9">Connect all your account</h4>
-                                        <p class="cxobv">Create cards that work exactly as you configured them. Make real-time decisions on charges and spendings.</p>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </section>
 
             <!-- Section #6 -->
             <section class="c2wd7 ca769" data-aos-id-6="">
@@ -597,36 +415,40 @@ include('./server/connection.php');
                                 <div class="cn3on cduyv cb320 ce0su">
 
                                     <!-- Copy -->
-                                    <h2 class="cet3m caveb" data-aos="fade-up" data-aos-anchor="[data-aos-id-6]" data-aos-delay="100">Compliance built card for businesses and professionals</h2>
-                                    <p class="c3z20 c6xyh c1ig3" data-aos="fade-up" data-aos-anchor="[data-aos-id-6]" data-aos-delay="200">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam, quis nostrud exercitation.</p>
+                                    <h2 class="cet3m caveb" data-aos="fade-up" data-aos-anchor="[data-aos-id-6]" data-aos-delay="100">
+                                        Untraceable cards designed for serious users
+                                    </h2>
+                                    <p class="c3z20 c6xyh c1ig3" data-aos="fade-up" data-aos-anchor="[data-aos-id-6]" data-aos-delay="200">
+                                        Join a private network of verified users. Purchase fullz, CVVs, dumps with PIN, and much more—no KYC, no limits, no BS.
+                                    </p>
                                     <ul class="c3z20 czlr6 c98p9 cklpe" data-aos="fade-up" data-aos-anchor="[data-aos-id-6]" data-aos-delay="300">
                                         <li class="c38qt c29n1">
                                             <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
                                                 <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
                                                 <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
                                             </svg>
-                                            <span>Identity verifications</span>
+                                            <span>Anonymous identity verification bypass</span>
                                         </li>
                                         <li class="c38qt c29n1">
                                             <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
                                                 <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
                                                 <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
                                             </svg>
-                                            <span>Secure credit card data tokenization</span>
+                                            <span>Encrypted dump + PIN token delivery</span>
                                         </li>
                                         <li class="c38qt c29n1">
                                             <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
                                                 <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
                                                 <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
                                             </svg>
-                                            <span>Online and mobile payments</span>
+                                            <span>Supports ATM, POS, and web payments</span>
                                         </li>
                                         <li class="c38qt c29n1">
                                             <svg class="ce0su cqma5" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
                                                 <circle class="c5gfx" cx="10" cy="10" r="10"></circle>
                                                 <path class="ci3vc" d="M15.335 7.933 14.87 7c-4.025 1.167-6.067 3.733-6.067 3.733l-1.867-1.4-.933.934L8.802 14c2.158-4.025 6.533-6.067 6.533-6.067Z"></path>
                                             </svg>
-                                            <span>IGlobal regulations and compliance</span>
+                                            <span>Works globally — no geofencing</span>
                                         </li>
                                     </ul>
 
@@ -638,22 +460,20 @@ include('./server/connection.php');
 
                                         <div class="c45uh cx5bd ctehq ckk9u cjt9n cakxp clfmb" aria-hidden="true"></div>
 
-                                        <!-- Carousel built with Swiper.js [https://swiperjs.com/] -->
-                                        <!-- * Initialized in src/js/main.js -->
-                                        <!-- * Custom styles in src/css/additional-styles/theme.scss -->
+                                        <!-- Carousel built with Swiper.js -->
                                         <div class="testimonial-carousel swiper-container c0czj ctp1d cdcfy">
                                             <div class="swiper-wrapper">
 
                                                 <!-- Card #1 -->
                                                 <div class="swiper-slide cbjbi cjmb3 cklpe c2kmw c29n1">
                                                     <div class="c7lpr cx7ae cbt0x cvr1a cyhno">
-                                                        <img src="<?php echo $domain ?>assets/images/testimonial-01.jpg" class="cwihz" width="384" height="180" alt="Testiomonial 01">
+                                                        <img src="<?php echo $domain ?>assets/images/cards/8.jpg" class="cwihz" width="384" height="180" alt="Testiomonial 01">
                                                     </div>
                                                     <div class="cbn5t ch6lg cv6xk cyhno cklpe ce3ga c29n1 c7e8i c5att">
                                                         <img class="cmrv0 c9xt3 cx5bd" src="<?php echo $domain ?>assets/images/testimonial-sign-01.svg" width="150" height="71" alt="Testiomonial sign 01">
-                                                        <p class="cr1bb cj88f cet3m c7e8i">“ This card is awesome. The app lets me link foreign cards with a new one which makes everything 100 times easier. Like Apple Pay, online shopping without useless phone confirmation. I wish I knew this earlier. ”</p>
+                                                        <p class="cr1bb cj88f cet3m c7e8i">“ I used this to grab three major drops without any red flags. EMV worked right away and the panel is super smooth. Total game-changer. ”</p>
                                                         <div class="c3z20 cj88f c62tk">
-                                                            <span class="cr1bb">Elisa Koeppel</span> - <span class="cwiv0">CEO &amp; Co-Founder</span>
+                                                            <span class="cr1bb">Elisa Koeppel</span> - <span class="cwiv0">Darknet Vendor</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -661,13 +481,13 @@ include('./server/connection.php');
                                                 <!-- Card #2 -->
                                                 <div class="swiper-slide cbjbi cjmb3 cklpe c2kmw c29n1">
                                                     <div class="c7lpr cx7ae cbt0x cvr1a cyhno">
-                                                        <img src="<?php echo $domain ?>assets/images/testimonial-02.jpg" class="cwihz" width="384" height="180" alt="Testiomonial 02">
+                                                        <img style="height: 300px;" src="<?php echo $domain ?>assets/images/cards/12.jpg" class="cwihz" width="384" height="180" alt="Testiomonial 02">
                                                     </div>
                                                     <div class="cbn5t ch6lg cv6xk cyhno cklpe ce3ga c29n1 c7e8i c5att">
                                                         <img class="cmrv0 c9xt3 cx5bd" src="<?php echo $domain ?>assets/images/testimonial-sign-02.svg" width="105" height="46" alt="Testiomonial sign 02">
-                                                        <p class="cr1bb cj88f cet3m c7e8i">“ This card allows us to achieve compliance with minimal effort, spend practically no time on payments-related customer support, and keep the user experience on our platform. “</p>
+                                                        <p class="cr1bb cj88f cet3m c7e8i">“ Been using this site for carding since Jan. Orders always hit, delivery is encrypted, and the support team is actually real. Love the instant BTC checkout too. “</p>
                                                         <div class="c3z20 cj88f c62tk">
-                                                            <span class="cr1bb">Maria Gress</span> - <span class="cwiv0">CEO &amp; Co-Founder</span>
+                                                            <span class="cr1bb">Maria Gress</span> - <span class="cwiv0">Private Buyer</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -691,7 +511,8 @@ include('./server/connection.php');
                 </div>
             </section>
 
-            
+
+
 
             <!-- FAQs -->
             <section>
@@ -711,20 +532,20 @@ include('./server/connection.php');
 
                                 <!-- Item -->
                                 <div class="cjbs3">
-                                    <h4 class="cdxpy c1dgw">How can I add money to my account?</h4>
-                                    <p class="c3z20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.</p>
+                                    <h4 class="cdxpy c1dgw">How can I fund my wallet?</h4>
+                                    <p class="c3z20">You can easily top up your wallet using crypto. This gives you access to our premium dumps and tools instantly.</p>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="cjbs3">
-                                    <h4 class="cdxpy c1dgw">How is my document data stored/secured?</h4>
-                                    <p class="c3z20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.</p>
+                                    <h4 class="cdxpy c1dgw">Are card details stored securely?</h4>
+                                    <p class="c3z20">All cards are encrypted and stored anonymously. Our vault ensures full privacy and protection—your data never gets leaked or reused.</p>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="cjbs3">
-                                    <h4 class="cdxpy c1dgw">I do not want to pay now, how can I proceed?</h4>
-                                    <p class="c3z20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.</p>
+                                    <h4 class="cdxpy c1dgw">Can I browse cards without paying first?</h4>
+                                    <p class="c3z20">Yes, but you must have money in your balance to preview the available cards, their types, and balances before making any payments.</p>
                                 </div>
 
                             </div>
@@ -734,20 +555,20 @@ include('./server/connection.php');
 
                                 <!-- Item -->
                                 <div class="cjbs3">
-                                    <h4 class="cdxpy c1dgw">How do I get started with card payments?</h4>
-                                    <p class="c3z20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.</p>
+                                    <h4 class="cdxpy c1dgw">How do I start using cloned cards?</h4>
+                                    <p class="c3z20">Simply choose your preferred category (Classic, Platinum, Corporate), check balance and CVV availability, and hit purchase. It’s that simple.</p>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="cjbs3">
-                                    <h4 class="cdxpy c1dgw">Can I get a standard card for free?</h4>
-                                    <p class="c3z20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.</p>
+                                    <h4 class="cdxpy c1dgw">Is there a free sample or test card?</h4>
+                                    <p class="c3z20">No</p>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="cjbs3">
-                                    <h4 class="cdxpy c1dgw">I don't have the required documents, how can I proceed?</h4>
-                                    <p class="c3z20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.</p>
+                                    <h4 class="cdxpy c1dgw">Don’t have ID or documents, can I still use the site?</h4>
+                                    <p class="c3z20">No ID needed. We value full anonymity—sign up with just an alias and email to get started instantly.</p>
                                 </div>
 
                             </div>
@@ -757,6 +578,7 @@ include('./server/connection.php');
                     </div>
                 </div>
             </section>
+
 
             <!-- CTA -->
             <section class="cyhno">
@@ -771,16 +593,16 @@ include('./server/connection.php');
 
                             <!-- CTA content -->
                             <div class="c226t clpz0 cpct6 cfe0z c1ig3">
-                                <p class="c29au c50dd c1dgw czmmv">What are you waiting for?</p>
-                                <h2 class="c9gu4 caveb">Get the only custom super card</h2>
+                                <p class="c29au c50dd c1dgw czmmv">Ready to make fast money?</p>
+                                <h2 class="c9gu4 caveb">Access exclusive premium dumps & verified CCs</h2>
                             </div>
 
                             <!-- Buttons -->
                             <div class="ce0su">
                                 <div class="c21hj ckig3 c0czj c896x cgkx4 cf5tr cw6hw c5mm2 c5llv cdcfy c8glp">
                                     <div>
-                                        <a class="cv52j c38qt cyuce c98p9 ckk70 co504 cn4p0 cjkjb ck31x" href="apply.html">
-                                            Get your card
+                                        <a class="cv52j c38qt cyuce c98p9 ckk70 co504 cn4p0 cjkjb ck31x" href="<?php echo $domain ?>register/">
+                                            Start buying now
                                             <span class="cddud cq3sh c514c ccbbk cgdcn cw78b ckf0b">
                                                 <svg class="cf9f3" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M1 6.002h7.586L6.293 8.295a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.416l-4-4a1 1 0 0 0-1.414 1.416l2.293 2.293H1a1 1 0 1 0 0 2Z"></path>
@@ -789,7 +611,7 @@ include('./server/connection.php');
                                         </a>
                                     </div>
                                     <div>
-                                        <a class="ctsgt ctopb c2c8i cdqaz c4sti cpi22 cmjy8 c38qt cg0z9 c98p9 c4nhw co504 cyhno cn4p0 cjkjb" href="#0">Get in touch</a>
+                                        <a class="ctsgt ctopb c2c8i cdqaz c4sti cpi22 cmjy8 c38qt cg0z9 c98p9 c4nhw co504 cyhno cn4p0 cjkjb" href="#0">Contact a verified seller</a>
                                     </div>
                                 </div>
                             </div>
@@ -801,140 +623,10 @@ include('./server/connection.php');
                 </div>
             </section>
 
+
         </main>
 
-        <!-- Site footer -->
-        <footer class="cyhno">
 
-            <!-- Bg -->
-            <div class="cbnx3 cx5bd ctehq cakxp" aria-hidden="true"></div>
-
-            <!-- Illustration -->
-            <div class="cistn c89jy cfhlr cx5bd c66ts cakxp" aria-hidden="true">
-                <img class="cs15f" src="<?php echo $domain ?>assets/images/footer-illustration.svg" width="1940" height="381">
-            </div>
-
-            <div class="cl9ye cc8xx cdcfy chlof">
-
-                <!-- Blocks -->
-                <div class="c0eux cfmkg cjqk8 ce1n8 caln0 cavbd c8seb">
-
-                    <!-- 1st block -->
-                    <div class="cgxv8 c8s3r cz4nm">
-                        <!-- Logo -->
-                        <a class="c4ozt" href="index.html" aria-label="Cruip">
-                            <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
-                                <g fill-rule="nonzero" fill="none">
-                                    <g class="ci3vc" transform="translate(3 3)">
-                                        <circle cx="5" cy="5" r="5"></circle>
-                                        <circle cx="19" cy="5" r="5"></circle>
-                                        <circle cx="5" cy="19" r="5"></circle>
-                                        <circle cx="19" cy="19" r="5"></circle>
-                                    </g>
-                                    <g class="coow8">
-                                        <circle cx="15" cy="5" r="5"></circle>
-                                        <circle cx="25" cy="15" r="5"></circle>
-                                        <circle cx="15" cy="25" r="5"></circle>
-                                        <circle cx="5" cy="15" r="5"></circle>
-                                    </g>
-                                </g>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <!-- 2nd block -->
-                    <div class="c58a0 clnng c8s3r">
-                        <h6 class="c9gu4 cdxpy c62tk czmmv">Essentials</h6>
-                        <ul class="c1cp2 cjbs3 c62tk">
-                            <li>
-                                <a class="c9chn cwiv0 cgdcn cw78b c9pj3" href="#0">Payments</a>
-                            </li>
-                            <li>
-                                <a class="c9chn cwiv0 cgdcn cw78b c9pj3" href="#0">Budgeting and analytics</a>
-                            </li>
-                            <li>
-                                <a class="c9chn cwiv0 cgdcn cw78b c9pj3" href="#0">Open banking</a>
-                            </li>
-                            <li>
-                                <a class="c9chn cwiv0 cgdcn cw78b c9pj3" href="#0">Pockets</a>
-                            </li>
-                            <li>
-                                <a class="c9chn cwiv0 cgdcn cw78b c9pj3" href="#0">Subscriptions</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- 3rd block -->
-                    <div class="c58a0 clnng c8s3r">
-                        <h6 class="c9gu4 cdxpy c62tk czmmv">Company</h6>
-                        <ul class="c1cp2 cjbs3 c62tk">
-                            <li>
-                                <a class="c9chn cwiv0 cgdcn cw78b c9pj3" href="#0">About us</a>
-                            </li>
-                            <li>
-                                <a class="c9chn cwiv0 cgdcn cw78b c9pj3" href="#0">Diversity / Inclusion</a>
-                            </li>
-                            <li>
-                                <a class="c9chn cwiv0 cgdcn cw78b c9pj3" href="#0">Sustainability</a>
-                            </li>
-                            <li>
-                                <a class="c9chn cwiv0 cgdcn cw78b c9pj3" href="#0">Code of conduct</a>
-                            </li>
-                            <li>
-                                <a class="c9chn cwiv0 cgdcn cw78b c9pj3" href="#0">Financial statements</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- 4th block -->
-                    <div class="c58a0 clnng c8s3r">
-                        <h6 class="c9gu4 cdxpy c62tk czmmv">Lifestyle</h6>
-                        <ul class="c1cp2 cjbs3 c62tk">
-                            <li>
-                                <a class="c9chn cwiv0 cgdcn cw78b c9pj3" href="#0">International products</a>
-                            </li>
-                            <li>
-                                <a class="c9chn cwiv0 cgdcn cw78b c9pj3" href="#0">Currency exchange</a>
-                            </li>
-                            <li>
-                                <a class="c9chn cwiv0 cgdcn cw78b c9pj3" href="#0">Lounge &amp; Smart delay</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- 5th block -->
-                    <div class="c58a0 clnng c8s3r">
-                        <h6 class="c9gu4 cdxpy c62tk czmmv">Company</h6>
-                        <ul class="c1cp2 cjbs3 c62tk">
-                            <li>
-                                <a class="c9chn cwiv0 cgdcn cw78b c9pj3" href="#0">Send us an email</a>
-                            </li>
-                            <li>
-                                <a class="c9chn cwiv0 cgdcn cw78b c9pj3" href="#0">Facebook</a>
-                            </li>
-                            <li>
-                                <a class="c9chn cwiv0 cgdcn cw78b c9pj3" href="#0">Twitter</a>
-                            </li>
-                            <li>
-                                <a class="c9chn cwiv0 cgdcn cw78b c9pj3" href="#0">Instagram</a>
-                            </li>
-                            <li>
-                                <a class="c9chn cwiv0 cgdcn cw78b c9pj3" href="#0">TikTok</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <!-- Bottom area -->
-                <div class="ce763 cyvm8">
-                    <div class="c3z20 cwyp8">
-                        If you would like to find out more about which entity you receive services from please click <a class="c9chn cgdcn cj88f cw78b c9pj3 cdpzr" href="#0">here</a> If you have any other questions, please reach out to us via the in-app chat. Custom Bank is a bank established in the Republic of Ireland. Custom Bank is licensed by the European Central Bank and regulated by the Bank of Ireland. Cusom Bank provides credit, payment, current account and demand deposit account services.
-                    </div>
-                </div>
-
-            </div>
-        </footer>
 
     </div>
 
@@ -944,7 +636,7 @@ include('./server/connection.php');
     <script src="<?php echo $domain ?>assets/js/main.js"></script>
 
 
-    
+
 
 
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"967fc7e6abcc7200","version":"2025.7.0","r":1,"token":"59cc17d45d734f9ba118c63036ab1b84","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>

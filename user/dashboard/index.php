@@ -26,11 +26,11 @@ $cardPurchase = $cardData['card_purchase'] ?? 0;
 
 
 
-                    // echo 
+// echo 
 
 
 
-                    ?>
+?>
 
 
 
@@ -40,10 +40,9 @@ $cardPurchase = $cardData['card_purchase'] ?? 0;
 <head>
 
     <meta charset="utf-8" />
-    <title>Transaction List | <?php echo $sitename ?> - Admin & Dashboard Template</title>
+    <title>Client Dashboard | <?php echo $sitename ?> - Black Market CC Access</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-    <meta content="Themesbrand" name="author" />
+    <meta content="Access premium stolen credit cards, dumps, and fullz. Updated daily." name="description" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="<?php echo $domain ?>assets/images/favicon.ico">
 
