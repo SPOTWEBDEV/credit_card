@@ -91,7 +91,7 @@ include("../../server/client/auth/index.php");
                                 <h4 class="mb-sm-0">My Card</h4>
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Client</a></li>
                                         <li class="breadcrumb-item active">My Card</li>
                                     </ol>
                                 </div>
@@ -130,7 +130,6 @@ include("../../server/client/auth/index.php");
                                                     <th scope="col">Card Type</th>
                                                     <th scope="col">Card Expiry Date</th>
                                                     <th scope="col">Price</th>
-                                                    <th scope="col">Status</th>
                                                     <th scope="col">Action</th>
                                                 </tr>
                                             </thead>
@@ -188,11 +187,7 @@ include("../../server/client/auth/index.php");
                                 <td>${card.card_type}</td>
                                 <td>${card.expiry_date}</td>
                                 <td>$${card.card_price}</td>
-                                <td>
-                                    <span style="text-transform:capitalize" class="badge  
-                                    ${card.purchase_status === 'pending' ? 'bg-danger-subtle text-danger' : card.purchase_status === 'approved' ? 'bg-success-subtle text-success' : 'bg-warning-subtle text-warning'}  
-                                    p-2">${card.purchase_status}</span>
-                                </td>
+                                
                                 <td>
                                   <a href="./view/?card_id=${card.uuid}"><button class="btn btn-success btn-sm">View More</button></a>
                                 </td>
@@ -276,11 +271,11 @@ include("../../server/client/auth/index.php");
         </div>
     </div>
 
-    <div class="customizer-setting d-none d-md-block">
+    <!-- <div class="customizer-setting d-none d-md-block">
         <div class="btn-info btn-rounded shadow-lg btn btn-icon btn-lg p-2" data-bs-toggle="offcanvas" data-bs-target="#theme-settings-offcanvas" aria-controls="theme-settings-offcanvas">
             <i class='mdi mdi-spin mdi-cog-outline fs-22'></i>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- JAVASCRIPT -->

@@ -175,7 +175,7 @@ include("../../../server/client/auth/index.php");
                                                                                                                                        <th scope="col">Back</th>
                                                                                                                                        <th scope="col">
                                                                                                                                                 <a href="../index.php">
-                                                                                                                                                         <button type="button" class="btn btn-secondary btn-sm">Back to Purchases</button>
+                                                                                                                                                         <button type="button" class="btn btn-secondary btn-sm">Back to My Card</button>
                                                                                                                                                 </a>
                                                                                                                                        </th>
                                                                                                                               </tr>

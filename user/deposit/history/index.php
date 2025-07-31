@@ -183,9 +183,10 @@ include("../../../server/client/auth/index.php");
                                 <td>$${deposit.amount}</td>
                                 <td>${deposit.payment_method}</td>
                                 <td>${deposit.date}</td>
+                            
                                 <td>
                                     <span style="text-transform:capitalize" class="badge  
-                                    ${deposit.status === 'sold' ? 'bg-danger-subtle text-danger' : 'bg-success-subtle text-success'}  
+                                    ${deposit.status === 'pending' ? 'bg-danger-subtle text-danger' : deposit.status === 'approved' ? 'bg-success-subtle text-success' : 'bg-warning-subtle text-warning'}  
                                     p-2">${deposit.status}</span>
                                 </td>
                             </tr>
@@ -272,7 +273,7 @@ include("../../../server/client/auth/index.php");
         </div>
     </div>
 
-    
+
 
 
     <!-- JAVASCRIPT -->

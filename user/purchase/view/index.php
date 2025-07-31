@@ -192,7 +192,7 @@ include("../../../server/client/auth/index.php");
                                                                                                                               </tr>
                                                                                                                               <tr>
                                                                                                                                        <th scope="col">CVV</th>
-                                                                                                                                       <th scope="col"><?php echo htmlspecialchars($card['cvv']); ?></th>
+                                                                                                                                       <th scope="col">***</th>
                                                                                                                               </tr>
                                                                                                                               <tr>
                                                                                                                                        <th scope="col">Expiry Date</th>
