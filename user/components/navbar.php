@@ -184,17 +184,31 @@ function getCurrentUrl()
     $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
     $domain = $_SERVER['HTTP_HOST'];
     $requestUri = $_SERVER['REQUEST_URI'];
+
+    // Remove query parameters
+    $requestUri = strtok($requestUri, '?');
+
     return $protocol . $domain . $requestUri;
 }
+
 
 // List of URLs where you don't want the modal to show
 $excludedUrls = [
     'http://localhost/credit_card/user/deposit/',
     'http://localhost/credit_card/user/deposit/index.php',
     'http://localhost/credit_card/user/deposit/#',
-    'https://grubman.com/user/deposit',
-    'https://grubman.com/user/deposit/',
-    'https://grubman.com/user/deposit/index.php',
+    'http://localhost/credit_card/user/deposit',
+    'http://localhost/credit_card/user/deposit/proof',
+    'http://localhost/credit_card/user/deposit/proof/',
+    'http://localhost/credit_card/user/deposit/proof/#',
+    'https://grubsp.com/user/deposit/',
+    'https://grubsp.com/user/deposit/index.php',
+    'https://grubsp.com/user/deposit/#',
+    'https://grubsp.com/user/deposit',
+    'https://grubman.com/user/deposit/proof',
+    'https://grubman.com/user/deposit/proof/',
+    'https://grubman.com/user/deposit/proof/#',
+    
 ];
 
 // Get the current full URL
@@ -252,5 +266,3 @@ if (!in_array($currentUrl, $excludedUrls)) {
         </div>
     </div>
 </div>
-
-
