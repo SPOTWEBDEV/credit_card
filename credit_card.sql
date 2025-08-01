@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 16, 2025 at 09:17 AM
+-- Generation Time: Aug 01, 2025 at 03:59 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -36,15 +36,6 @@ CREATE TABLE `contact_messages` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `contact_messages`
---
-
-INSERT INTO `contact_messages` (`id`, `user`, `subject`, `message`, `status`, `created_at`) VALUES
-(1, '1', 'Inquiry', 'I want to know more about your services.', 'unread', '2025-07-07 13:38:19'),
-(2, '1', 'Support', 'I am having trouble logging in.', 'read', '2025-07-07 13:38:19'),
-(3, '1', 'Feedback', 'Great website, keep it up!', 'resolve', '2025-07-07 13:38:19');
-
 -- --------------------------------------------------------
 
 --
@@ -75,11 +66,20 @@ CREATE TABLE `cvv_cards` (
 --
 
 INSERT INTO `cvv_cards` (`id`, `card_number`, `bin`, `cvv`, `expiry_date`, `card_type`, `status`, `price`, `card_image`, `bank_logo`, `created_at`, `updated_at`, `country`, `bank`, `name`, `uuid`) VALUES
-(1, '8854474431552658', '885447', '653', '2028-07-15', 'debit', 'available', '4.00', NULL, NULL, '2025-07-15 02:17:21', '2025-07-15 02:17:21', 'Nigeria', 'Zenith Bank', 'Amelia Moore', 'f6306ce2-61ab-11f0-bf9f-8851fbcb1ead'),
-(2, '2409245211401783', '240924', '102', '2028-07-15', 'debit', 'available', '4.00', NULL, NULL, '2025-07-15 02:17:21', '2025-07-15 02:17:21', 'Nigeria', 'Zenith Bank', 'Sophia Martinez', 'f64165e5-61ab-11f0-bf9f-8851fbcb1ead'),
-(3, '0525474200499572', '052547', '788', '2028-07-15', 'debit', 'sold', '4.00', NULL, NULL, '2025-07-15 02:18:11', '2025-07-15 20:52:37', 'Poland', 'Poland Bank', 'Emily Davis', 'f64173a5-61ab-11f0-bf9f-8851fbcb1ead'),
-(4, '3823904379056049', '382390', '766', '2028-07-15', 'debit', 'sold', '8.00', NULL, NULL, '2025-07-15 02:18:43', '2025-07-15 20:50:07', 'Iceland', 'Iceland Bank', 'Charlotte Thomas', 'f6417546-61ab-11f0-bf9f-8851fbcb1ead'),
-(5, '1260429009465565', '126042', '730', '2028-07-15', 'debit', 'sold', '2.00', NULL, NULL, '2025-07-15 18:48:49', '2025-07-15 19:10:43', 'USA', 'SPOTbank', 'Emily Davis', '68ddf914-61ac-11f0-bf9f-8851fbcb1ead');
+(1, '0889092879593249', '615506', '339', '2027-08-01', 'debit', 'sold', '28.00', NULL, NULL, '2025-08-01 01:40:37', '2025-08-01 01:50:41', 'China', 'China Construction Bank', 'John Smith', '86640f1b-6e78-11f0-bab7-8851fbcb1ead'),
+(2, '9590483795301368', '978842', '464', '2028-08-01', 'debit', 'available', '36.00', NULL, NULL, '2025-08-01 01:40:37', '2025-08-01 01:40:37', 'Dubai', 'Emirates NBD', 'William Brown', '8670f1de-6e78-11f0-bab7-8851fbcb1ead'),
+(3, '2143711753328788', '785413', '260', '2027-08-01', 'debit', 'available', '31.00', NULL, NULL, '2025-08-01 01:41:10', '2025-08-01 01:41:10', 'China', 'Bank of China', 'John Smith', '9a0b9bb4-6e78-11f0-bab7-8851fbcb1ead'),
+(4, '8251845008970505', '716010', '180', '2026-08-01', 'debit', 'available', '18.00', NULL, NULL, '2025-08-01 01:41:10', '2025-08-01 01:41:10', 'Dubai', 'RAKBANK', 'Charlotte Thomas', '9a29500e-6e78-11f0-bab7-8851fbcb1ead'),
+(5, '3886071873823349', '904308', '327', '2027-08-01', 'debit', 'sold', '53.00', NULL, NULL, '2025-08-01 01:41:11', '2025-08-01 01:49:06', 'United Kingdom', 'NatWest', 'Olivia Wilson', '9a45f105-6e78-11f0-bab7-8851fbcb1ead'),
+(6, '1749330562306718', '456891', '003', '2026-08-01', 'debit', '', '19.00', NULL, NULL, '2025-08-01 01:41:28', '2025-08-01 01:41:28', 'China', 'China Construction Bank', 'Benjamin Anderson', 'a49e4097-6e78-11f0-bab7-8851fbcb1ead'),
+(7, '7788470096932177', '177051', '551', '2028-08-01', 'debit', '', '44.00', NULL, NULL, '2025-08-01 01:41:28', '2025-08-01 01:41:28', 'United Kingdom', 'Lloyds Bank', 'Emily Davis', 'a4c1590d-6e78-11f0-bab7-8851fbcb1ead'),
+(8, '0445141025595982', '328007', '054', '2026-08-01', 'debit', '', '24.00', NULL, NULL, '2025-08-01 01:41:28', '2025-08-01 01:41:28', 'Dubai', 'RAKBANK', 'Daniel Lee', 'a4c82112-6e78-11f0-bab7-8851fbcb1ead'),
+(9, '2006309265517908', '693143', '122', '2028-08-01', 'debit', '', '55.00', NULL, NULL, '2025-08-01 01:41:28', '2025-08-01 01:41:28', 'United States', 'Chase', 'James Taylor', 'a4d182b2-6e78-11f0-bab7-8851fbcb1ead'),
+(10, '6247632159104745', '777521', '412', '2027-08-01', 'debit', 'sold', '31.00', NULL, NULL, '2025-08-01 01:44:53', '2025-08-01 01:49:48', 'Dubai', 'Emirates NBD', 'Jane Doe', '1e9bab1a-6e79-11f0-bab7-8851fbcb1ead'),
+(11, '5867773796829877', '085791', '615', '2028-08-01', 'debit', 'available', '48.00', NULL, NULL, '2025-08-01 01:44:53', '2025-08-01 01:44:53', 'United States', 'US Bank', 'Michael Johnson', '1eac8e66-6e79-11f0-bab7-8851fbcb1ead'),
+(12, '0815980922363803', '518255', '726', '2028-08-01', 'debit', 'available', '30.00', NULL, NULL, '2025-08-01 01:45:16', '2025-08-01 01:45:16', 'China', 'China Construction Bank', 'Olivia Wilson', '2cca7b21-6e79-11f0-bab7-8851fbcb1ead'),
+(13, '2565671505741623', '302618', '105', '2026-08-01', 'debit', 'available', '28.00', NULL, NULL, '2025-08-01 01:45:17', '2025-08-01 01:45:17', 'Dubai', 'Emirates NBD', 'Michael Johnson', '2ce756ef-6e79-11f0-bab7-8851fbcb1ead'),
+(14, '4010255889418887', '177250', '737', '2027-08-01', 'debit', 'available', '51.00', NULL, NULL, '2025-08-01 01:45:17', '2025-08-01 01:45:17', 'United States', 'US Bank', 'James Taylor', '2cf1abc9-6e79-11f0-bab7-8851fbcb1ead');
 
 -- --------------------------------------------------------
 
@@ -102,9 +102,9 @@ CREATE TABLE `cvv_purchases` (
 --
 
 INSERT INTO `cvv_purchases` (`id`, `user_id`, `cvv_card_id`, `amount`, `purchase_date`, `status`, `uuid`) VALUES
-(3, 4, 5, '2.00', '2025-07-15 20:10:42.633313', 'approved', '2857695e-61b4-11f0-bf9f-8851fbcb1ead'),
-(4, 4, 4, '8.00', '2025-07-15 21:50:07.777320', 'approved', '5b067f0d-61bd-11f0-bf9f-8851fbcb1ead'),
-(5, 4, 3, '4.00', '2025-07-15 21:52:37.595240', 'approved', 'b452e7df-61bd-11f0-bf9f-8851fbcb1ead');
+(1, 4, 5, '53.00', '2025-08-01 02:49:06.521153', 'approved', 'b598c5b3-6e79-11f0-bab7-8851fbcb1ead'),
+(2, 4, 10, '31.00', '2025-08-01 02:49:48.748179', 'approved', 'cec4623a-6e79-11f0-bab7-8851fbcb1ead'),
+(3, 4, 1, '28.00', '2025-08-01 02:50:41.666012', 'approved', 'ee4eb9be-6e79-11f0-bab7-8851fbcb1ead');
 
 -- --------------------------------------------------------
 
@@ -129,19 +129,10 @@ CREATE TABLE `deposits` (
 --
 
 INSERT INTO `deposits` (`id`, `deposts_id`, `user`, `amount`, `date`, `status`, `payment_method`, `payment_address`, `image`) VALUES
-(6, 'DEP-687580277bfec', 4, '300.00', '2025-07-14 22:09:43', 'pending', 'BTC', '', 'bc1qexamplebtcaddress'),
-(7, 'DEP-687580a03f45e', 4, '40.00', '2025-07-14 22:11:44', 'pending', 'BTC', 'bc1qexamplebtcaddress', NULL),
-(8, 'DEP-6875817d582a3', 4, '40.00', '2025-07-14 22:15:25', 'pending', 'BTC', 'bc1qexamplebtcaddress', NULL),
-(9, 'DEP-687581881956f', 4, '30.00', '2025-07-14 22:15:36', 'pending', 'ETH', '0xexampleethaddress', NULL),
-(10, 'DEP-687581bb14f82', 4, '20.00', '2025-07-14 22:16:27', 'pending', 'BTC', 'bc1qexamplebtcaddress', NULL),
-(11, 'DEP-687581d267369', 4, '29.00', '2025-07-14 22:16:50', 'pending', 'ETH', '0xexampleethaddress', NULL),
-(12, 'DEP-687585859eafe', 4, '304599.00', '2025-07-14 22:32:37', 'pending', 'BTC', 'bc1qexamplebtcaddress', NULL),
-(13, 'DEP-687587fe5a45a', 4, '100.00', '2025-07-14 22:43:10', 'pending', 'BTC', 'bc1qexamplebtcaddress', NULL),
-(14, 'DEP-6875883a47cd1', 4, '100.00', '2025-07-14 22:44:10', 'pending', 'BTC', 'bc1qexamplebtcaddress', NULL),
-(15, 'DEP-6875885ebd19c', 4, '20.00', '2025-07-14 22:44:46', 'pending', 'ETH', '0xexampleethaddress', 'proof_68758a5b26076.jpg'),
-(16, 'DEP-6875a8bee34a1', 4, '501.00', '2025-07-15 01:02:54', 'pending', 'BTC', 'bc1qexamplebtcaddress', 'proof_6875a8cfb8715.jpg'),
-(17, 'DEP-6875a948c0b00', 4, '232.00', '2025-07-15 01:05:12', 'approved', 'BTC', 'bc1qexamplebtcaddress', 'proof_6875a9e588767.jpg'),
-(18, 'DEP-68769c3f2b3c8', 4, '100.00', '2025-07-15 18:21:51', 'approved', 'BTC', 'bc1qexamplebtcaddress', 'proof_68769c5e9a01a.jpg');
+(1, 'DEP-688bcbd27efdf', 4, '100.00', '2025-07-31 20:02:26', 'approved', 'Bitcoin', 'bc1qgzd0yxxqsxwhdtcudnkgjqakdajdyplhtdn0q2', NULL),
+(2, 'DEP-688c101400ab3', 4, '100.00', '2025-08-01 00:53:40', 'pending', 'Bitcoin', 'bc1qgzd0yxxqsxwhdtcudnkgjqakdajdyplhtdn0q2', NULL),
+(3, 'DEP-688bcbd27dnfk', 4, '600.00', '2025-07-31 20:02:26', 'approved', 'Bitcoin', 'bc1qgzd0yxxqsxwhdtcudnkgjqakdajdyplhtdn0q2', NULL),
+(4, 'DEP-688c101400ceb', 4, '200.00', '2025-08-01 00:53:40', 'approved', 'Bitcoin', 'bc1qgzd0yxxqsxwhdtcudnkgjqakdajdyplhtdn0q2', NULL);
 
 -- --------------------------------------------------------
 
@@ -165,7 +156,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `phone`, `password`, `date`, `status`, `bal`) VALUES
-(4, 'spotwebdev.com', 'spotwebdev.com@gmail.com', '08108833188', '$2y$10$V6GU29xhZMFj/8sD9Q0qnuN.1EF4Zgje66EERTqY1ouIsvr21YsRW', '2025-07-15 20:52:36.910078', 'active', '286'),
+(4, 'spotwebdev.com', 'spotwebdev.com@gmail.com', '08108833188', '$2y$10$V6GU29xhZMFj/8sD9Q0qnuN.1EF4Zgje66EERTqY1ouIsvr21YsRW', '2025-08-01 01:50:41.500974', 'active', '438'),
 (5, 'firstclass', 'firstclass@gmail.com', '08108833188', '$2y$10$V6GU29xhZMFj/8sD9Q0qnuN.1EF4Zgje66EERTqY1ouIsvr21YsRW', '2025-07-17 22:26:38.635084', 'active', '0');
 
 --
@@ -216,25 +207,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `contact_messages`
 --
 ALTER TABLE `contact_messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `cvv_cards`
 --
 ALTER TABLE `cvv_cards`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `cvv_purchases`
 --
 ALTER TABLE `cvv_purchases`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `deposits`
 --
 ALTER TABLE `deposits`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
