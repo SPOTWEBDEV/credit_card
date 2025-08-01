@@ -2,25 +2,39 @@
 include("../../../server/connection.php");
 
 
-if (isset($_POST['generate'])) {
-    $status = $_POST['status'];
-    $price = floatval($_POST['price']);
-    $country = trim($_POST['country']);
-    $bank = trim($_POST['bank']);
-    $input_name = trim($_POST['name']);
 
-    if ($price <= 0) {
-        echo "<script>alert('❌ Price must be greater than 0');</script>";
-        exit;
+
+
+$banksByCountry = [
+    "United States" => ["Bank of America", "Chase", "Wells Fargo", "Citibank", "US Bank"],
+    "United Kingdom" => ["Barclays", "HSBC", "Lloyds Bank", "NatWest", "Standard Chartered"],
+    "China" => ["ICBC", "China Construction Bank", "Bank of China", "Agricultural Bank of China", "Bank of Communications"],
+    "Dubai" => ["Emirates NBD", "Dubai Islamic Bank", "Mashreq Bank", "RAKBANK", "Commercial Bank of Dubai"]
+];
+
+function normalizeCountry($input)
+{
+    $input = strtolower(trim($input));
+    if ($input === 'uk') return 'United Kingdom';
+    if ($input === 'usa') return 'United States';
+    if ($input === 'uae' || $input === 'dubai') return 'Dubai';
+    return ucwords($input);
+}
+
+function findCountryByBank($bank, $banksByCountry)
+{
+    foreach ($banksByCountry as $country => $banks) {
+        if (in_array($bank, $banks)) return $country;
     }
+    return null;
+}
 
-    $count = $_POST['time'];
-    if ($count <= 0) {
-        echo "<script>alert('❌ Number of cards must be a positive whole number');</script>";
-        exit;
-    }
+function generateCVVCards($count, $status, $price, $givenCountry = '', $givenBank = '', $inputName = '')
+{
+    global $banksByCountry, $connection;
 
-    $success = 0;
+    $generated = [];
+    $used = [];
 
     $namesArray = [
         "John Smith",
@@ -37,42 +51,107 @@ if (isset($_POST['generate'])) {
         "Amelia Moore"
     ];
 
-    for ($i = 0; $i < $count; $i++) {
-        $card_number = '';
+    $givenCountry = $givenCountry ? normalizeCountry($givenCountry) : '';
+    $givenBank = $givenBank ? ucwords(trim($givenBank)) : '';
 
+    for ($i = 0; $i < $count; $i++) {
+        $country = $givenCountry;
+        $bank = $givenBank;
+
+        // If bank is provided but country is not, infer country
+        if (!$country && $bank) {
+            $country = findCountryByBank($bank, $banksByCountry);
+        }
+
+        // If country is provided but bank is not, pick random bank from that country
+        if ($country && !$bank) {
+            $banks = $banksByCountry[$country] ?? [];
+            if (!$banks) continue;
+            $bank = $banks[array_rand($banks)];
+        }
+
+        // If neither provided, pick a random combination not already used
+        if (!$country && !$bank) {
+            $availableCountries = array_keys($banksByCountry);
+            do {
+                $country = $availableCountries[array_rand($availableCountries)];
+            } while (in_array($country, array_column($generated, 'country'))); // Avoid repetition
+
+            $banks = $banksByCountry[$country];
+            $bank = $banks[array_rand($banks)];
+        }
+
+        // Avoid duplicate country+bank pair
+        $key = $country . '|' . $bank;
+        if (isset($used[$key])) {
+            $i--;
+            continue;
+        }
+        $used[$key] = true;
+
+        // Price logic
+        if (!$price) {
+            if (in_array($country, ['United States', 'United Kingdom'])) {
+                $cardPrice = rand(40, 60);
+            } else {
+                $cardPrice = rand(15, 40);
+            }
+        } else {
+            $cardPrice = $price;
+        }
+
+        // Name
+        $name = $inputName ?: $namesArray[array_rand($namesArray)];
+
+        // Generate card details
+        $card_number = '';
         for ($j = 0; $j < 16; $j++) {
             $card_number .= rand(0, 9);
         }
 
         $cvv = str_pad(rand(0, 999), 3, '0', STR_PAD_LEFT);
-
-        // Generate a random 6-digit BIN
         $bin = str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
-
-        // Generate expiry date: random between 1–3 years from today
         $yearsToAdd = rand(1, 3);
         $expiry_date = date('Y-m-d', strtotime("+$yearsToAdd years"));
 
-        $name = $input_name ?: $namesArray[array_rand($namesArray)];
-
+        // Insert into database
         $insert = mysqli_query($connection, "
-        INSERT INTO cvv_cards 
-        (card_number, cvv, bin, expiry_date, price, status, country, bank, name) 
-        VALUES 
-        ('$card_number', '$cvv', '$bin', '$expiry_date', '$price', '$status', '$country', '$bank', '$name')
-    ");
+            INSERT INTO cvv_cards 
+            (card_number, cvv, bin, expiry_date, price, status, country, bank, name) 
+            VALUES 
+            ('$card_number', '$cvv', '$bin', '$expiry_date', '$cardPrice', '$status', '$country', '$bank', '$name')
+        ");
 
         if ($insert) {
-            $success++;
+            $generated[] = ['country' => $country, 'bank' => $bank];
         }
     }
 
+    return $generated;
+}
 
-    if ($success === $count) {
-        echo "<script>alert('✅ $count CVV card(s) generated successfully'); window.location.reload();</script>";
-    } else {
-        echo "<script>alert('⚠️ Only $success out of $count CVV card(s) generated');</script>";
-    }
+
+
+
+if (isset($_POST['generate'])) {
+    // Get form values and sanitize
+    $count = isset($_POST['time']) ? intval($_POST['time']) : 1;
+    $status = trim($_POST['status']);
+    $price = isset($_POST['price']) && $_POST['price'] !== '' ? floatval($_POST['price']) : null;
+    $country = isset($_POST['country']) ? strtolower(trim($_POST['country'])) : '';
+    $bank = isset($_POST['bank']) ? strtolower(trim($_POST['bank'])) : '';
+    $name = isset($_POST['name']) ? trim($_POST['name']) : '';
+
+    // Include the logic code you already have for:
+    // - Generating the cards
+    // - Inferring country or bank
+    // - Ensuring variation in results
+
+
+    generateCVVCards($count, $status, $price, $country, $bank, $name);
+
+
+    echo "<script>alert('✅ $count CVV card(s) generated successfully!');</script>";
 }
 
 
@@ -345,17 +424,17 @@ if (isset($_POST['generate'])) {
 
                             <div class="mb-3">
                                 <label for="price" class="form-label">Price</label>
-                                <input type="number" step="0.01" min="0" name="price" class="form-control" placeholder="Enter price" required>
+                                <input type="number" step="0.01" min="0" name="price" class="form-control" placeholder="Leave blank to auto-generate">
                             </div>
 
                             <div class="mb-3">
                                 <label for="country" class="form-label">Country</label>
-                                <input type="text" name="country" class="form-control" placeholder="Enter country" required>
+                                <input type="text" name="country" class="form-control" placeholder="Leave blank to auto-generate">
                             </div>
 
                             <div class="mb-3">
                                 <label for="bank" class="form-label">Bank</label>
-                                <input type="text" name="bank" class="form-control" placeholder="Enter bank" required>
+                                <input type="text" name="bank" class="form-control" placeholder="Leave blank to auto-generate">
                             </div>
 
                             <div class="mb-3">

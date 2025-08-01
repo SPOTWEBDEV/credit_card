@@ -8,7 +8,7 @@ $userData = mysqli_fetch_assoc($getBalanceQuery);
 $balance = $userData['bal'];
 
 // Get total deposit 
-$getDepositTotalQuery = mysqli_query($connection, "SELECT SUM(amount) as total_deposit FROM deposits WHERE user='$id' AND status='approved'");
+$getDepositTotalQuery = mysqli_query($connection, "SELECT * FROM deposits WHERE user='$id' AND status='approved'");
 $totalDeposit = mysqli_num_rows($getDepositTotalQuery);
 
 // Get pending deposits

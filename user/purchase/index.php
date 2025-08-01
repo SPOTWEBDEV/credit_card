@@ -7,6 +7,7 @@ include("../../server/client/auth/index.php");
 
 <!doctype html>
 <html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="light" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable">
+
 <head>
 
     <meta charset="utf-8" />
@@ -126,6 +127,7 @@ include("../../server/client/auth/index.php");
                                 if ($insert) {
                                     mysqli_query($connection, "UPDATE cvv_cards SET status='sold' WHERE id='$card_id'");
                                     echo '<div class="alert alert-success">Card purchased successfully.</div>';
+                                    echo "<script>setTimeout(()=>{ window.location.href='../my-card/'},3000)</script>";
                                 } else {
                                     mysqli_query($connection, "UPDATE users SET bal='{$user['bal']}' WHERE id='$id'");
                                     echo '<div class="alert alert-danger">Failed to purchase card: ' . mysqli_error($connection) . '</div>';
@@ -207,8 +209,8 @@ include("../../server/client/auth/index.php");
                                 <td>***</td>
                                 <td>${card.bin}</td>
                                 <td>$${card.price}</td>
-                                <td>${card.country}</td>
-                                <td>${card.bank}</td>
+                                <td style="text-transform:capitalize">${card.country}</td>
+                                <td style="text-transform:capitalize">${card.bank}</td>
                                 <td>
                                     <span style="text-transform:capitalize" class="badge  
                                     ${card.status === 'sold' ? 'bg-danger-subtle text-danger' : 'bg-success-subtle text-success'}  

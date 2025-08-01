@@ -31,7 +31,7 @@ include('./server/connection.php');
                     <!-- Site branding -->
                     <div class="ce0su cpmys">
                         <!-- Logo -->
-                        <a class="c4ozt"  aria-label="Cruip">
+                        <a class="c4ozt" aria-label="Cruip">
                             <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
                                 <g fill-rule="nonzero" fill="none">
                                     <g class="cypkd" transform="translate(3 3)">
@@ -332,8 +332,8 @@ include('./server/connection.php');
                                 <!-- Content -->
                                 <div class="cb320 ce0su">
 
-                                    <h2 class="cet3m caveb" data-aos="fade-up" data-aos-anchor="[data-aos-id-4]" data-aos-delay="100">Get cashback rewards on your favourite banks</h2>
-                                    <p class="c3z20 c6xyh c1ig3" data-aos="fade-up" data-aos-anchor="[data-aos-id-4]" data-aos-delay="200">Earn while you spend with top financial institutions and their exclusive cashback programs.</p>
+                                    <h2 class="cet3m caveb" data-aos="fade-up" data-aos-anchor="[data-aos-id-4]" data-aos-delay="100">You can access a wide range of banks credit card</h2>
+                                    <p class="c3z20 c6xyh c1ig3" data-aos="fade-up" data-aos-anchor="[data-aos-id-4]" data-aos-delay="200">Whether you're looking for local banking options or international financial institutions, we provide a diverse selection to meet your needs.</p>
 
                                     <!-- Lists -->
                                     <div class="cwm88 cgkx4 cojul ceonn" data-aos="fade-up" data-aos-anchor="[data-aos-id-4]" data-aos-delay="300">
@@ -341,31 +341,33 @@ include('./server/connection.php');
                                         <div>
                                             <h5 class="cdxpy c755p">Local Banks</h5>
                                             <ul class="c3z20 czlr6 c98p9 cklpe">
-                                                <li class="c38qt c29n1"><span>First National Bank</span></li>
-                                                <li class="c38qt c29n1"><span>Unity Bank</span></li>
-                                                <li class="c38qt c29n1"><span>Access Bank</span></li>
-                                                <li class="c38qt c29n1"><span>Zenith Bank</span></li>
-                                                <li class="c38qt c29n1"><span>GTBank</span></li>
-                                                <li class="c38qt c29n1"><span>Fidelity Bank</span></li>
-                                                <li class="c38qt c29n1"><span>EcoBank</span></li>
-                                                <li class="c38qt c29n1"><span>UBA</span></li>
+                                                <li class="c38qt c29n1"><span>Bank of America</span></li>
+                                                <li class="c38qt c29n1"><span>Chase</span></li>
+                                                <li class="c38qt c29n1"><span>Wells Fargo</span></li>
+                                                <li class="c38qt c29n1"><span>Citibank</span></li>
+                                                <li class="c38qt c29n1"><span>TD Bank</span></li>
+                                                <li class="c38qt c29n1"><span>U.S. Bank</span></li>
+                                                <li class="c38qt c29n1"><span>PNC Bank</span></li>
+                                                <li class="c38qt c29n1"><span>Regions Bank</span></li>
                                             </ul>
                                         </div>
+
                                         <!-- Column #2 -->
                                         <div>
                                             <h5 class="cdxpy c755p">International Banks</h5>
                                             <ul class="c3z20 czlr6 c98p9 cklpe">
-                                                <li class="c38qt c29n1"><span>HSBC</span></li>
                                                 <li class="c38qt c29n1"><span>Barclays</span></li>
+                                                <li class="c38qt c29n1"><span>HSBC</span></li>
+                                                <li class="c38qt c29n1"><span>Lloyds Bank</span></li>
                                                 <li class="c38qt c29n1"><span>Standard Chartered</span></li>
-                                                <li class="c38qt c29n1"><span>Bank of America</span></li>
-                                                <li class="c38qt c29n1"><span>Chase</span></li>
-                                                <li class="c38qt c29n1"><span>Citibank</span></li>
-                                                <li class="c38qt c29n1"><span>Wells Fargo</span></li>
                                                 <li class="c38qt c29n1"><span>Deutsche Bank</span></li>
+                                                <li class="c38qt c29n1"><span>BNP Paribas</span></li>
+                                                <li class="c38qt c29n1"><span>Credit Agricole</span></li>
+                                                <li class="c38qt c29n1"><span>ING Bank</span></li>
                                             </ul>
                                         </div>
                                     </div>
+
 
 
 
